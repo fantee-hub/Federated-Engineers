@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-mori: var(--font-pp-mori);
+  --container-max: 1520px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +22,15 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans;
+}
+.page {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+.prose {
+  max-width: 65ch;
+}
+.font-mori {
+  font-family: var(--font-pp-mori), sans-serif;
 }
