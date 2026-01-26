@@ -12,7 +12,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="flex h-18 w-full items-stretch border-b border-gray-200 bg-white fixed right-0 left-0 page">
+    <nav className="flex h-18 w-full items-stretch border-b border-gray-200 bg-white fixed right-0 left-0 page z-20">
       <div className="flex-1 items-center justify-center border-r border-gray-100 ">
         <div
           className="h-full w-full bg-no-repeat"
