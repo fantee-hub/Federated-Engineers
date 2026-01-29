@@ -1,3 +1,4 @@
+import ForEngineers from "@/src/components/sections/ForEngineers";
 import Hero from "@/src/components/sections/HeroSection/Hero";
 import WhatWeDo from "@/src/components/sections/WhatWeDo";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="font-mori pt-18">
       <Hero />
       <WhatWeDo />
+      <ForEngineers />
     </div>
   );
 }
