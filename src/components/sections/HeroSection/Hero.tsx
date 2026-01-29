@@ -4,7 +4,7 @@ import { FloatingCloud } from "./FloatingCloud";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[calc(100vh-72px)] 2xl:min-h-0 2xl:py-30 flex flex-col justify-center  w-full overflow-hidden bg-[#180A32] pl-20 text-white  page">
+    <section className="relative min-h-[calc(100vh-72px)] 2xl:min-h-0 2xl:py-30 flex flex-col justify-center  w-full overflow-hidden bg-[#180A32] pl-30 text-white  page">
       <FloatingCloud
         src="/assets/cloud aesthetics 1.svg"
         className="top-0 left-[10%]"
@@ -23,8 +23,9 @@ const Hero = () => {
           </h1>
 
           <p className="max-w-140.5 text-lg leading-relaxed text-[#E6E6E6]">
-            Join experienced engineers delivering data and AI systems for
-            businesses, or hire engineers directly from this same pool.
+            Join experienced <strong>Production Competent</strong> engineers
+            delivering Data and AI Platforms for businesses, or hire engineers
+            directly from this same pool.
           </p>
 
           <div className="flex flex-wrap gap-4 z-10 relative mt-8">
