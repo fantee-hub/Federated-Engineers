@@ -1,6 +1,7 @@
 import { TextSwitcher } from "./TextSwitcher";
 import { TaskCard } from "./TaskCard";
 import { FloatingCloud } from "./FloatingCloud";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,11 +30,17 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 z-10 relative mt-8">
-            <button className="rounded-lg bg-[#7632F9] px-8 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110">
+            <button className="rounded-lg flex items-center gap-2 bg-[#7632F9] px-8 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110">
               Join The Pool
+              <span>
+                <ArrowRight />
+              </span>
             </button>
-            <button className="rounded-lg border-2 border-[#7632F9] bg-[#180A32] cursor-pointer px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30">
+            <button className="rounded-lg flex items-center gap-2 border-2 border-[#7632F9] bg-[#180A32] cursor-pointer px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30">
               Hire From The Pool
+              <span>
+                <ArrowRight />
+              </span>
             </button>
             <FloatingCloud
               src="/assets/cloud aesthetics 3.svg"
