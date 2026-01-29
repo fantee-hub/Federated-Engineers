@@ -5,7 +5,7 @@ const services = [
   {
     title: "Data Platforms",
     description:
-      "We build scalable data environments for ingestion, transformation, and access, giving engineers real experience and businesses reliable data platforms.",
+      "We build scalable data platforms for ingestion, transformation, and access, giving engineers hands-on experience and businesses reliable systems.",
     icons: [
       "/assets/icons/apache.svg",
       "/assets/icons/cluster.svg",
@@ -42,7 +42,7 @@ const services = [
   {
     title: "Analytics Environments",
     description:
-      "We build dashboards, reports, and insight layers that support data-driven decisions, giving engineers real analytics experience and companies clear, reliable insights.",
+      "We build analytics systems that enable data-driven decisions, giving engineers real analytics experience and companies reliable insight infrastructure.",
     icons: [
       "/assets/insights.svg",
       "/assets/icons/power-bi.svg",
@@ -68,7 +68,7 @@ const services = [
   {
     title: "Cross-Discipline Integration",
     description:
-      "We connect data, ML, platform, and analytics engineering into unified systems, giving engineers real cross-functional experience and companies seamless end-to-end solutions.",
+      "We connect Data, Machine Learning, and Platform Engineering into unified platforms, giving engineers production-ready experience and companies end-to-end solutions.",
     icons: [
       "/assets/icons/github.svg",
       "/assets/icons/jira.svg",
@@ -89,8 +89,13 @@ const WhatWeDo = () => {
             What We Do
           </span>
           <h2 className="max-w-4xl text-[48px] font-semibold leading-14 text-[#2F1464]">
-            A Collaborative Pool Building <br /> Data and AI Platforms
+            A Collaborative Engineering Pool <br /> Building Data and AI
+            Platforms
           </h2>
+          <p className="max-w-124 pt-2 text-[#5C5C5C]">
+            Local projects aren’t enough for real production systems. Our pool
+            gives engineers the experience needed to work at scale.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 border-y border-[#E6E6E6] bg-[#E6E6E6] md:grid-cols-2 lg:grid-cols-3 gap-px">
