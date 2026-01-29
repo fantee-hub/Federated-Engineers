@@ -1,5 +1,6 @@
 import ForEngineers from "@/src/components/sections/ForEngineers";
 import Hero from "@/src/components/sections/HeroSection/Hero";
+import ReadyToBuild from "@/src/components/sections/ReadyToBuild";
 import WhatWeDo from "@/src/components/sections/WhatWeDo";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <ForEngineers />
+      <ReadyToBuild />
     </div>
   );
 }
