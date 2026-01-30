@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 
 const ReadyToBuild = () => {
   const industryIcons = [
@@ -27,7 +28,17 @@ const ReadyToBuild = () => {
           />
         </div>
         <div className="flex-1 bg-[#7632F9] relative overflow-hidden flex flex-col items-center justify-center text-center text-white">
-          <div className="absolute top-6 left-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: -8 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "mirror",
+              ease: "easeInOut",
+            }}
+            className="absolute top-6 left-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block"
+          >
             <div className="flex gap-2 mb-2">
               {industryIcons.map((i) => (
                 <div
@@ -47,7 +58,7 @@ const ReadyToBuild = () => {
             <p className="text-[13px] text-white font-medium text-left">
               Industry-designed workflows
             </p>
-          </div>
+          </motion.div>
 
           <h2 className="text-[30px] lg:text-[40px] font-semibold mb-2 max-w-2xl leading-12">
             Ready to Build With the Pool?
@@ -65,7 +76,17 @@ const ReadyToBuild = () => {
             Join The Pool
           </button>
 
-          <div className="absolute bottom-6 right-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block text-right">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: 8 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "mirror",
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-6 right-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block text-right"
+          >
             <div className="flex gap-2 mb-2 justify-end">
               {processIcons.map((i) => (
                 <div
@@ -85,7 +106,7 @@ const ReadyToBuild = () => {
             <p className="text-[13px] text-white font-medium text-left">
               Process That Pays Off
             </p>
-          </div>
+          </motion.div>
         </div>
         <div>
           <img
