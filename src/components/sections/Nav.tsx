@@ -1,18 +1,51 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/assets/logo.svg";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Nav = () => {
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("");
+
   const navLinks = [
-    { name: "What We Do", href: "#" },
-    { name: "Engineers", href: "#" },
-    { name: "How it Works", href: "#" },
-    { name: "Businesses", href: "#" },
+    { name: "What We Do", href: "#what-we-do" },
+    { name: "Engineers", href: "#engineers" },
+    { name: "How it Works", href: "#how-it-works" },
+    { name: "Businesses", href: "#businesses" },
     { name: "About Us", href: "/about" },
   ];
 
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        const navHeight = 72;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
+  const isActive = (link: { href: string }) => {
+    if (link.href.startsWith("#")) {
+      return activeSection === link.href;
+    }
+    return pathname === link.href;
+  };
+
   return (
-    <nav className="flex h-18 w-full items-stretch bg-white fixed right-0 left-0 page z-50">
+    <nav className="flex h-18 w-full items-stretch bg-white fixed right-0 left-0 page z-50 border-b border-[#E6E6E6]">
       <div className="flex-1 items-center justify-center border-r border-gray-100 ">
         <div
           className="h-full w-full bg-no-repeat"
@@ -30,12 +63,17 @@ const Nav = () => {
         </span>
       </div>
 
-      <div className="flex items-center gap-8 border-r border-gray-100 px-4">
+      <div className="flex items-center border-r border-gray-100 ">
         {navLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
-            className="whitespace-nowrap text text-[#2E2E2E] transition-colors hover:text-[#7632F9] last:pr-4"
+            onClick={(e) => handleSmoothScroll(e, link.href)}
+            className={`flex items-center px-6 whitespace-nowrap text transition-colors h-full ${
+              isActive(link)
+                ? "bg-[#7632F9] text-white"
+                : "text-[#2E2E2E] hover:bg-[#7632F9] hover:text-white"
+            }`}
           >
             {link.name}
           </Link>

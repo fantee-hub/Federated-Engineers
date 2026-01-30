@@ -11,11 +11,19 @@ export default function Home() {
   return (
     <div className="font-mori pt-18">
       <Hero />
-      <WhatWeDo />
-      <ForEngineers />
+      <div id="what-we-do">
+        <WhatWeDo />
+      </div>
+      <div id="engineers">
+        <ForEngineers />
+      </div>
       <ReadyToBuild />
-      <HowItWorks />
-      <ForBusinesses />
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
+      <div id="businesses">
+        <ForBusinesses />
+      </div>
       <WhyChoose />
       <FAQSection className="border-y border-[#E6E6E6] mt-20" />
     </div>
