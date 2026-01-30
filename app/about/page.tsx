@@ -1,6 +1,7 @@
 import CoreValuesMarquee from "@/src/components/AboutPage/CoreValuesMarquee";
 import HeroSection from "@/src/components/AboutPage/HeroSection";
 import OurMission from "@/src/components/AboutPage/OurMission";
+import WhoWeServe from "@/src/components/AboutPage/WhoWeServe";
 import WhyChoose from "@/src/components/sections/WhyChoose";
 
 const About = () => {
@@ -10,6 +11,7 @@ const About = () => {
       <CoreValuesMarquee />
       <OurMission />
       <WhyChoose />
+      <WhoWeServe />
     </div>
   );
 };
