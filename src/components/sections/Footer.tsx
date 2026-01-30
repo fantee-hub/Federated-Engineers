@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full bg-[#180A32] mt-20 py-20 page">
       <div className="mx-auto max-w-300 px-6">
         <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-          <div className="flex-1 bg-[#7632F9] lg:p-10 border-r-4 border-white">
+          <div className="flex-1 bg-[#7632F9] lg:p-10 border-r-4 border-white relative">
             <h2 className="mb-4 text-[40px] font-semibold leading-12 text-white">
               Take the Next Step With the Pool
             </h2>
@@ -21,6 +21,13 @@ const Footer = () => {
               <button className="rounded-lg border-2 border-white w-39.25 h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10">
                 Hire Talent
               </button>
+            </div>
+            <div>
+              <img
+                src="/assets/bars.svg"
+                alt="Footer Illustration"
+                className="absolute bottom-0 right-0 hidden h-34.5 w-auto lg:block"
+              />
             </div>
           </div>
 

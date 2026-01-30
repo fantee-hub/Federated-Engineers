@@ -6,9 +6,9 @@ const Nav = () => {
   const navLinks = [
     { name: "What We Do", href: "#" },
     { name: "Engineers", href: "#" },
-    { name: "Businesses", href: "#" },
     { name: "How it Works", href: "#" },
-    { name: "FAQs", href: "#" },
+    { name: "Businesses", href: "#" },
+    { name: "About Us", href: "/about" },
   ];
 
   return (
