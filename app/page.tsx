@@ -1,3 +1,4 @@
+import FAQSection from "@/src/components/sections/FaqSection";
 import ForBusinesses from "@/src/components/sections/ForBusinesses";
 import ForEngineers from "@/src/components/sections/ForEngineers";
 import Hero from "@/src/components/sections/HeroSection/Hero";
@@ -16,6 +17,7 @@ export default function Home() {
       <HowItWorks />
       <ForBusinesses />
       <WhyChoose />
+      <FAQSection className="border-y border-[#E6E6E6] mt-20" />
     </div>
   );
 }
