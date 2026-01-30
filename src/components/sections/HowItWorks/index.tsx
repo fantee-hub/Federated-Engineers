@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="w-full bg-white page">
+    <section className="w-full bg-white page border-b border-[#E6E6E6]">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
         <div className="flex flex-col items-center px-10 pt-20 pb-10 text-center">
           <span className="mb-2 rounded-full bg-[#FAFAFA] px-6 py-4 font-semibold text-[#7632F9]">
@@ -37,12 +37,9 @@ const HowItWorks = () => {
             collaboration.
           </p>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#E6E6E6] border-y border-[#E6E6E6] gap-px md:gap-px">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#E6E6E6] border-t border-[#E6E6E6] gap-px md:gap-px">
           {steps.map((item, index) => (
-            <div
-              key={index}
-              className="flex bg-white flex-col p-10 lg:px-6 lg:pt-6 lg:pb-4"
-            >
+            <div key={index} className="flex bg-white flex-col p-10 lg:p-6">
               <div className="mb-8">
                 <span className="inline-block rounded-full px-4 py-3 text-sm font-semibold text-[#7632F9] bg-white border border-[#E6E6E6]">
                   {item.step}
