@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#180A32] mt-20 py-20 page">
+    <footer className="w-full bg-[#180A32] py-20 page">
       <div className="mx-auto max-w-300 px-6">
         <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
           <div className="flex-1 bg-[#7632F9] lg:p-10 border-r-4 border-white relative">

@@ -13,7 +13,8 @@ const About = () => {
       <OurMission />
       <WhyChoose />
       <WhoWeServe />
-      <FAQSection className="border-b border-[#E6E6E6]" />
+      <FAQSection className="border-b border-[#E6E6E6] mb-20" />
+      <CoreValuesMarquee />
     </div>
   );
 };
