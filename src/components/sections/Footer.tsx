@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
 const Footer = () => {
@@ -99,8 +100,8 @@ const Footer = () => {
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white">Legal</h4>
                 <div className="space-y-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="/privacy-policy"
                     className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors  ">
@@ -111,7 +112,7 @@ const Footer = () => {
                       />
                     </div>
                     <span>Privacy Policy</span>
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
