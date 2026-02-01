@@ -113,8 +113,8 @@ const Footer = () => {
                     </div>
                     <span>Privacy Policy</span>
                   </Link>
-                  <a
-                    href="#"
+                  <Link
+                    href="/terms-of-service"
                     className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
@@ -125,7 +125,7 @@ const Footer = () => {
                       />
                     </div>
                     <span>Terms of Service</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
