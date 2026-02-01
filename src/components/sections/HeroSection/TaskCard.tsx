@@ -30,7 +30,7 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
         {[...items, ...items, ...items].map((item, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 whitespace-nowrap rounded-full bg-[#FAFAFA] px-4 py-2 text-[13px] font-medium text-gray-600"
+            className="flex items-center gap-3 whitespace-nowrap rounded-full bg-[#FAFAFA] px-4 py-2 lg:text-[13px] text-xs font-medium text-gray-600"
           >
             <div
               className={`h-8 w-8 rounded-full flex items-center justify-center overflow-hidden
@@ -99,7 +99,7 @@ export const TaskCard = () => {
   };
 
   return (
-    <div className="absolute left-[60%] -translate-x-[60%] -top-32 z-20 w-123.5">
+    <div className="absolute lg:left-[60%] lg:-translate-x-[60%] lg:-top-32 z-20 lg:w-123.5 max-w-77.5 lg:max-w-full mx-auto left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/4 lg:translate-y-0">
       <div className="rounded-2xl p-2 bg-white/10 backdrop-blur-md shadow-2xl border border-white/20">
         <div className="rounded-lg bg-white p-4 shadow-inner relative overflow-hidden">
           <div className="mb-4 flex items-center justify-between">
@@ -110,7 +110,7 @@ export const TaskCard = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="inline-block rounded-full bg-[#F6F5FF] px-4 py-2 text-sm font-semibold text-[#7632F9]"
+                  className="inline-block rounded-full bg-[#F6F5FF] px-4 py-2 lg:text-sm text-xs font-semibold text-[#7632F9]"
                 >
                   {data[activeTab].title}
                 </motion.span>

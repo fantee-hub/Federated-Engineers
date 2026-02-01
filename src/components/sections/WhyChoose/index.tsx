@@ -43,16 +43,17 @@ const reasons = [
 
 const WhyChoose = () => {
   return (
-    <section className="w-full bg-white page border-b border-[#E6E6E6]">
+    <section className="w-full bg-white page border-b border-[#E6E6E6] mt-10 lg:mt-0 px-4 lg:px-0 border-t lg:border-t-0">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
-        <div className="flex flex-col items-center px-10 pt-20 pb-10 text-center">
-          <span className="mb-2 rounded-full bg-[#FAFAFA] px-6 py-4 font-semibold text-[#7632F9]">
+        <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
+          <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
             Why Choose Federated Engineers
           </span>
-          <h2 className="max-w-4xl text-[48px] font-semibold leading-14 text-[#2F1464]">
-            A Collaborative Engineering <br /> Pool You Can Trust
+          <h2 className="lg:max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
+            A Collaborative Engineering <br className="hidden lg:block" /> Pool
+            You Can Trust
           </h2>
-          <p className="max-w-139.5 pt-2 text-[#5C5C5C]">
+          <p className="lg:max-w-139.5 pt-2 text-[#5C5C5C]">
             Our pool brings vetted engineers, shared standards, and structured
             collaboration to deliver dependable data and AI support.
           </p>

@@ -80,15 +80,15 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <div className="relative page">
-      <div className="absolute border-[#E6E6E6] border-t w-full top-20"></div>
-      <div className="absolute border-[#E6E6E6] border-b w-full bottom-0"></div>
-      <section className="mx-auto max-w-300 border-x border-[#E6E6E6] bg-white pt-30 ">
+    <div className="relative page px-4 lg:px-0 border-b border-[#E6E6E6] lg:border-none">
+      <div className="absolute border-[#E6E6E6] border-t w-full top-20 hidden lg:block"></div>
+      <div className="absolute border-[#E6E6E6] border-b w-full bottom-0 hidden lg:block"></div>
+      <section className="mx-auto max-w-300 border-x border-[#E6E6E6] bg-white lg:pt-30 pt-10">
         <div className="flex flex-col items-center px-10 pb-10 text-center">
-          <span className="mb-2 rounded-full bg-[#FAFAFA] px-6 py-4 font-semibold text-[#7632F9]">
+          <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
             What We Do
           </span>
-          <h2 className="max-w-4xl text-[48px] font-semibold leading-14 text-[#2F1464]">
+          <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
             A Collaborative Engineering Pool <br /> Building Data and AI
             Platforms
           </h2>
@@ -98,10 +98,10 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 border-y border-[#E6E6E6] bg-[#E6E6E6] md:grid-cols-2 lg:grid-cols-3 gap-px">
+        <div className="grid grid-cols-1 lg:border-y border-t border-[#E6E6E6] bg-[#E6E6E6] md:grid-cols-2 lg:grid-cols-3 gap-px">
           {services.map((service, index) => (
             <div key={index} className="group flex flex-col bg-white">
-              <div className="flex flex-1 flex-col p-10 lg:px-6 lg:pt-6 lg:pb-4">
+              <div className="flex flex-1 flex-col px-6 pt-6 pb-4">
                 <h3 className="mb-3 text-[20px] font-semibold text-[#2F1464]">
                   {service.title}
                 </h3>

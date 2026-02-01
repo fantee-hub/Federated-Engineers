@@ -5,62 +5,67 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[calc(100vh-72px)] 2xl:min-h-0 2xl:py-30 flex flex-col justify-center  w-full overflow-hidden bg-[#180A32] pl-30 text-white  page">
+    <section className="relative min-h-[calc(100vh-72px)] 2xl:min-h-0 2xl:py-30 flex flex-col justify-center w-full overflow-hidden bg-[#180A32] lg:pl-30 text-white page">
       <FloatingCloud
         src="/assets/cloud aesthetics 1.svg"
-        className="top-0 left-[10%]"
+        className="top-0 left-[5%] lg:top-0 lg:left-[10%]"
       />
       <FloatingCloud
         src="/assets/cloud aesthetics 2.svg"
-        className="top-0 right-0"
+        className="top-0 right-0 lg:block"
+        delay={1}
       />
 
-      <div className="flex flex-col lg:flex-row lg:items-center">
-        <div className="flex-1 space-y-4 max-w-155.75">
-          <h1 className="text-[56px] font-semibold leading-16 tracking-tight">
-            A Collaborative Pool of <br />
-            <TextSwitcher /> <br />
+      <div className="flex flex-col lg:flex-row lg:items-center pt-20 lg:pt-0">
+        <div className="flex-1 space-y-6 lg:space-y-4 max-w-full lg:max-w-155.75 z-10 px-4 lg:px-0">
+          <h1 className="text-[32px] lg:text-[56px] font-semibold leading-tight lg:leading-16 tracking-tight">
+            A Collaborative Pool of <br className="hidden lg:block" />
+            <TextSwitcher /> <br className="hidden lg:block" />
             Building Data & AI Systems
           </h1>
 
-          <p className="max-w-140.5 text-lg leading-relaxed text-[#E6E6E6]">
+          <p className="max-w-full lg:max-w-140.5 text-base lg:text-lg leading-relaxed text-[#E6E6E6]">
             Join experienced <strong>Production Competent</strong> engineers
             delivering Data and AI Platforms for businesses, or hire engineers
             directly from this same pool.
           </p>
 
-          <div className="flex flex-wrap gap-4 z-10 relative mt-8">
-            <button className="rounded-lg flex items-center gap-2 bg-[#7632F9] px-8 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110">
+          <div className="flex flex-col lg:flex-row gap-4 relative mt-8 ">
+            <button className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110">
               Join The Pool
-              <span>
-                <ArrowRight />
-              </span>
+              <ArrowRight size={20} />
             </button>
-            <button className="rounded-lg flex items-center gap-2 border-2 border-[#7632F9] bg-[#180A32] cursor-pointer px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30">
+            <button className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 border border-[#7632F9] bg-[#180A32] cursor-pointer px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30">
               Hire From The Pool
-              <span>
-                <ArrowRight />
-              </span>
+              <ArrowRight size={20} />
             </button>
+
             <FloatingCloud
               src="/assets/cloud aesthetics 3.svg"
-              className="-bottom-14 left-[60%] -z-10"
+              className="-bottom-14 left-[60%] -z-10  lg:block"
               delay={2}
             />
           </div>
         </div>
 
-        <div className="relative lg:absolute lg:right-0 lg:bottom-0 ">
-          <div className="relative h-full">
-            <div className="overflow-hidden">
+        <div className="relative mt-45 lg:mt-0 lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-auto z-10">
+          <div className="relative h-full flex justify-center">
+            <div className="overflow-hidden w-full max-w-125 lg:max-w-none rounded-t-3xl lg:rounded-none border-t border-x border-[#7632F9]/30 lg:border-none">
               <img
                 src="/assets/outer background.png"
                 alt="Engineering Team"
-                className="w-full object-cover grayscale-[0.2]"
+                className="w-full object-cover grayscale-[0.2] hidden lg:block"
+              />
+              <img
+                src="/assets/outer background mobile.png"
+                alt="Engineering Team Mobile"
+                className="w-full object-cover lg:hidden"
               />
             </div>
 
-            <TaskCard />
+            <div className="absolute -top-16 lg:static">
+              <TaskCard />
+            </div>
           </div>
         </div>
       </div>

@@ -3,36 +3,36 @@ import Marquee from "react-fast-marquee";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#180A32] py-20 page">
-      <div className="mx-auto max-w-300 px-6">
-        <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-          <div className="flex-1 bg-[#7632F9] lg:p-10 border-r-4 border-white relative">
-            <h2 className="mb-4 text-[40px] font-semibold leading-12 text-white">
+    <footer className="w-full bg-[#180A32] lg:py-20 py-10 page">
+      <div className="mx-auto max-w-300 lg:px-6 px-4">
+        <div className="flex flex-col overflow-hidden rounded-2xl lg:flex-row">
+          <div className="flex-1  bg-[#7632F9] lg:p-10 lg:border-r-4 lg:border-b-0 border-b-4 pt-6 border-white relative ">
+            <h2 className="mb-4 lg:text-[40px] text-[28px] font-semibold lg:leading-12 leading-8 text-white px-6 lg:px-0">
               Take the Next Step With the Pool
             </h2>
-            <p className="mb-6 max-w-104 text-lg text-[#E6E6E6]">
+            <p className="mb-6 lg:max-w-104 lg:text-lg text-[#E6E6E6] px-6 lg:px-0">
               Join the pool as an engineer or hire vetted talent for your data
               and AI work.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="rounded-lg bg-white w-44 h-15 flex items-center justify-center font-semibold text-lg text-[#7632F9] cursor-pointer ease-in-out transition-transform hover:scale-105">
+            <div className="flex flex-wrap gap-4 px-6 lg:px-0">
+              <button className="rounded-lg bg-white lg:w-44 w-full h-15 flex items-center justify-center font-semibold text-lg text-[#7632F9] cursor-pointer ease-in-out transition-transform hover:scale-105">
                 Join the Pool
               </button>
-              <button className="rounded-lg border-2 border-white w-39.25 h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10">
+              <button className="rounded-lg border-2 border-white lg:w-39.25 w-full h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10">
                 Hire Talent
               </button>
             </div>
-            <div>
+            <div className="flex justify-end mt-20 lg:mt-0">
               <img
                 src="/assets/bars.svg"
                 alt="Footer Illustration"
-                className="absolute bottom-0 right-0 hidden h-34.5 w-auto lg:block"
+                className="lg:absolute bottom-0 right-0 h-34.5 lg:w-auto w-46 lg:block "
               />
             </div>
           </div>
 
-          <div className="relative flex-1 overflow-hidden bg-[#2F1464] lg:pt-10 lg:pb-0 lg:px-10">
-            <div className="relative z-10 grid grid-cols-1 gap-8">
+          <div className="relative flex-1 h-89.5 lg:h-auto overflow-hidden bg-[#2F1464] lg:pt-10 lg:pb-0 lg:px-10 ">
+            <div className="relative z-10 grid grid-cols-1 gap-8 p-6 lg:p-0">
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white">Contact</h4>
                 <div className="space-y-4">

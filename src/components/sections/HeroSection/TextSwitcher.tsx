@@ -21,7 +21,7 @@ export const TextSwitcher = () => {
 
   return (
     <span
-      className="relative inline-flex h-[1.2em] w-156.5 items-center overflow-hidden my-2 px-4 py-2 align-middle text-white"
+      className="relative inline-flex lg:h-[1.2em] lg:w-156.5 w-full items-center overflow-hidden my-2 p-2 align-middle text-white"
       style={{
         background: "linear-gradient(90deg, #471E95 60%, #180A32 100%)",
       }}
@@ -33,7 +33,7 @@ export const TextSwitcher = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -50, opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="whitespace-nowrap font-bold"
+          className="whitespace-nowrap font-semibold"
         >
           {ROLES[index]}
         </motion.span>

@@ -12,7 +12,8 @@ const ForEngineers = () => {
         "Tune compute, storage, and cloud resources for efficiency and reliability.",
         "Supporting cross-functional teams across the pool",
       ],
-      position: "top-0 left-1/2 -translate-x-1/2 z-20",
+
+      position: "lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:z-20",
     },
     {
       role: "Data Engineers",
@@ -24,7 +25,7 @@ const ForEngineers = () => {
         "Ensuring data quality, reliability, and accessibility",
         "Collaborating with ML engineers to provide training-ready data",
       ],
-      position: "bottom-0 left-20 z-20",
+      position: "lg:bottom-0 lg:left-20 lg:z-20",
     },
     {
       role: "Machine Learning Engineers",
@@ -36,18 +37,18 @@ const ForEngineers = () => {
         "Monitoring performance and refining workflows",
         "Collaborating with platform engineers to ensure scalable systems",
       ],
-      position: "bottom-0 right-20 z-20",
+      position: "lg:bottom-0 lg:right-20 lg:z-20",
     },
   ];
 
   return (
-    <section className="w-full bg-white border-t border-b border-[#E6E6E6] page mt-20 ">
-      <div className="border-x border-[#E6E6E6] mx-auto max-w-300 pb-20 ">
-        <div className="flex flex-col items-center px-10 pt-20 pb-10 text-center">
-          <span className="mb-2 rounded-full bg-[#FAFAFA] px-6 py-4 font-semibold text-[#7632F9]">
+    <section className="w-full bg-white border-t border-b border-[#E6E6E6] page mt-10 lg:mt-20 px-4 lg:px-0 mb-10 lg:mb-0">
+      <div className="border-x border-[#E6E6E6] mx-auto max-w-300 pb-10 lg:pb-20">
+        <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
+          <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
             For Engineers
           </span>
-          <h2 className="max-w-182 text-[48px] font-semibold leading-14 text-[#2F1464]">
+          <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
             What You’ll Work On as an Engineer in the Pool
           </h2>
           <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
@@ -57,9 +58,9 @@ const ForEngineers = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-300 h-212.5 px-6">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-132 h-132  overflow-hidden">
-            <div className="flex items-center justify-center h-full font-medium">
+        <div className="relative mx-auto max-w-300 lg:h-212.5">
+          <div className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full lg:w-132 px-6 lg:px-0 lg:mb-0">
+            <div className="aspect-square lg:w-132 lg:h-132 overflow-hidden shadow-sm">
               <img
                 src="/assets/forEngineersImage.png"
                 alt="For Engineers Hero"
@@ -68,36 +69,48 @@ const ForEngineers = () => {
             </div>
           </div>
 
-          {categories.map((card, idx) => (
-            <div
-              key={idx}
-              className={`absolute ${card.position} w-95.5 bg-white/20 p-2 rounded-2xl  shadow-[0_8px_30px_rgb(0,0,0,0.06)] `}
-            >
-              <div className="bg-white py-4 px-6 rounded-lg ">
-                <div className="flex items-center gap-3 mb-4 pt-3">
-                  <span>
-                    <img src={card.icon} alt={card.role} className="w-8 h-8" />
-                  </span>
-                  <h4 className="font-semibold text-[#2E2E2E]">{card.role}</h4>
-                </div>
-                <ul className="space-y-3 max-w-91.5 ">
-                  {card.tasks.map((task, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-2 text-sm text-[#2E2E2E] leading-relaxed "
-                    >
-                      <div className="mt-1 shrink-0 w-6 h-6 rounded-full bg-[#E8F6ED] flex items-center justify-center">
-                        <div className="w-4 h-4 flex items-center justify-center rounded-full bg-[#16A34A] text-white">
-                          <Check size={10} />
+          <div className="flex lg:block overflow-x-auto lg:overflow-visible snap-x snap-mandatory no-scrollbar px-6 lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
+            {categories.map((card, idx) => (
+              <div
+                key={idx}
+                className={`
+                  shrink-0 snap-center w-73.5 lg:w-98 
+                  lg:absolute ${card.position}
+                  bg-white/20 p-1.5 lg:p-2 rounded-2xl 
+                  lg:shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/50 shadow-md
+                `}
+              >
+                <div className="bg-white lg:py-5 lg:px-6 px-3 py-4 rounded-xl border border-gray-50 h-full">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100">
+                      <img
+                        src={card.icon}
+                        alt={card.role}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h4 className="font-bold text-[#2E2E2E]">{card.role}</h4>
+                  </div>
+
+                  <ul className="space-y-2 max-w-91.5">
+                    {card.tasks.map((task, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-3 lg:text-[14px] text-xs text-[#4A4A4A] leading-relaxed"
+                      >
+                        <div className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-[#E8F6ED] flex items-center justify-center">
+                          <div className="w-3.5 h-3.5 flex items-center justify-center rounded-full bg-[#16A34A] text-white">
+                            <Check size={8} strokeWidth={4} />
+                          </div>
                         </div>
-                      </div>
-                      {task}
-                    </li>
-                  ))}
-                </ul>
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

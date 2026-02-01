@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const ReadyToBuild = () => {
   const industryIcons = [
@@ -18,16 +19,16 @@ const ReadyToBuild = () => {
     "/assets/icons/material-symbols.svg",
   ];
   return (
-    <section className="w-full bg-white border-b border-[#E6E6E6] page">
+    <section className="w-full bg-white border-b border-t lg:border-t-0 border-[#E6E6E6] page px-4 lg:px-0">
       <div className="w-full flex justify-center gap-px mx-auto max-w-300">
         <div>
           <img
             src="/assets/readytobuildline1.svg"
             alt="Ghost Box Left"
-            className="w-full h-full object-cover"
+            className="lg:w-full h-full w-4 object-cover"
           />
         </div>
-        <div className="flex-1 bg-[#7632F9] relative overflow-hidden flex flex-col items-center justify-center text-center text-white">
+        <div className="flex-1 bg-[#7632F9] relative overflow-hidden  p-6 lg:p-0 flex flex-col items-center justify-center text-center text-white">
           <motion.div
             initial={{ y: 0 }}
             animate={{ y: -8 }}
@@ -37,7 +38,7 @@ const ReadyToBuild = () => {
               repeatType: "mirror",
               ease: "easeInOut",
             }}
-            className="absolute top-6 left-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block"
+            className="lg:absolute lg:top-6 lg:left-6 bg-[#5E28C7]  rounded-2xl p-4 lg:block"
           >
             <div className="flex gap-2 mb-2">
               {industryIcons.map((i) => (
@@ -60,10 +61,10 @@ const ReadyToBuild = () => {
             </p>
           </motion.div>
 
-          <h2 className="text-[30px] lg:text-[40px] font-semibold mb-2 max-w-2xl leading-12">
+          <h2 className="text-[28px] lg:text-[40px] font-semibold mb-2 max-w-2xl lg:leading-12 leading-8 mt-10 lg:mt-0">
             Ready to Build With the Pool?
           </h2>
-          <p className="text-[#F5F5F5] text-lg max-w-159 mb-6 leading-7">
+          <p className="text-[#F5F5F5] lg:text-lg max-w-159 mb-6 lg:leading-7 leading-6">
             Build real data and AI systems with experienced{" "}
             <span className="font-semibold text-white">
               Production Competent
@@ -72,8 +73,9 @@ const ReadyToBuild = () => {
             better opportunities.
           </p>
 
-          <button className="bg-white text-[#7632F9] text-lg w-45 h-15 flex items-center justify-center rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition-colors shadow-lg">
+          <button className="bg-white text-[#7632F9] mb-10 gap-2 lg:mb-0 text-lg lg:w-45 h-15 w-full flex items-center justify-center rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition-colors shadow-lg">
             Join The Pool
+            <ArrowRight className="lg:hidden block" />
           </button>
 
           <motion.div
@@ -85,7 +87,7 @@ const ReadyToBuild = () => {
               repeatType: "mirror",
               ease: "easeInOut",
             }}
-            className="absolute bottom-6 right-6 bg-[#5E28C7]  rounded-2xl p-4 hidden lg:block text-right"
+            className="lg:absolute lg:bottom-6 right-6 bg-[#5E28C7]  rounded-2xl p-4  lg:block text-right"
           >
             <div className="flex gap-2 mb-2 justify-end">
               {processIcons.map((i) => (
@@ -112,7 +114,7 @@ const ReadyToBuild = () => {
           <img
             src="/assets/readytobuildline1.svg"
             alt="Ghost Box Left"
-            className="w-full h-full object-cover"
+            className="lg:w-full h-full w-4 object-cover"
           />
         </div>
       </div>

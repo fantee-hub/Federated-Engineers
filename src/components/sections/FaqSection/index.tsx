@@ -36,16 +36,16 @@ const FAQSection = ({ className }: { className: string }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className={`w-full bg-white page ${className}`}>
+    <section className={`w-full bg-white page ${className} px-4 lg:px-0`}>
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
-        <div className="flex flex-col items-center px-10 pt-20 pb-10 text-center">
-          <span className="mb-2 rounded-full bg-[#FAFAFA] px-6 py-4 font-semibold text-[#7632F9]">
+        <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
+          <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
             FAQs
           </span>
-          <h2 className="max-w-182 text-[48px] font-semibold leading-14 text-[#2F1464]">
+          <h2 className="lg:max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
             Answers to Common Questions
           </h2>
-          <p className="max-w-108.5 pt-2 text-[#5C5C5C]">
+          <p className="lg:max-w-108.5 pt-2 text-[#5C5C5C]">
             Here are key details engineers and businesses often want to know
             about joining the pool or hiring from it.
           </p>
@@ -64,9 +64,11 @@ const FAQSection = ({ className }: { className: string }) => {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="flex w-full items-center justify-between px-7 py-6 text-left cursor-pointer transition-colors hover:bg-[#FAFAFA]"
+                  className="flex w-full items-center justify-between lg:px-7 p-4 gap-2 lg:py-6 text-left cursor-pointer transition-colors hover:bg-[#FAFAFA]"
                 >
-                  <span className="text-[20px] text-black">{faq.question}</span>
+                  <span className="lg:text-[20px] text-lg text-black">
+                    {faq.question}
+                  </span>
                   <motion.div
                     animate={{ rotate: openIndex === index ? 45 : 0 }}
                     className="flex h-8 w-8 min-w-8 items-center justify-center rounded-full bg-[#E4D6FE]"
@@ -86,7 +88,7 @@ const FAQSection = ({ className }: { className: string }) => {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-7 pb-6 text-[#5C5C5C] leading-6 max-w-170">
+                      <div className="lg:px-7 px-4 pb-6 text-[#5C5C5C] leading-6 max-w-170">
                         {faq.answer}
                       </div>
                     </motion.div>

@@ -24,6 +24,9 @@
 body {
   @apply font-sans;
 }
+html {
+  scroll-behavior: smooth;
+}
 .page {
   max-width: var(--container-max);
   margin-inline: auto;
