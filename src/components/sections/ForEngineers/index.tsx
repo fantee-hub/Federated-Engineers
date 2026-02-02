@@ -1,4 +1,7 @@
+"use client";
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { ScrollReveal } from "../../ScrollReveal";
 
 const ForEngineers = () => {
   const categories = [
@@ -12,7 +15,7 @@ const ForEngineers = () => {
         "Tune compute, storage, and cloud resources for efficiency and reliability.",
         "Supporting cross-functional teams across the pool",
       ],
-
+      initial: { opacity: 0, y: -50 },
       position: "lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:z-20",
     },
     {
@@ -25,6 +28,7 @@ const ForEngineers = () => {
         "Ensuring data quality, reliability, and accessibility",
         "Collaborating with ML engineers to provide training-ready data",
       ],
+      initial: { opacity: 0, x: -50 },
       position: "lg:bottom-0 lg:left-20 lg:z-20",
     },
     {
@@ -37,6 +41,7 @@ const ForEngineers = () => {
         "Monitoring performance and refining workflows",
         "Collaborating with platform engineers to ensure scalable systems",
       ],
+      initial: { opacity: 0, x: 50 },
       position: "lg:bottom-0 lg:right-20 lg:z-20",
     },
   ];
@@ -44,22 +49,30 @@ const ForEngineers = () => {
   return (
     <section className="w-full bg-white border-t border-b border-[#E6E6E6] page mt-10 lg:mt-20 px-4 lg:px-0 mb-10 lg:mb-0">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300 pb-10 lg:pb-20">
-        <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
-          <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
-            For Engineers
-          </span>
-          <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
-            What You’ll Work On as an Engineer in the Pool
-          </h2>
-          <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
-            Engineers gain experience building scalable data platforms that
-            support AI and analytics workloads, working across Data, Data
-            Platform, and Machine Learning engineering.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
+            <span className="mb-2 rounded-full bg-[#FAFAFA] lg:px-6 lg:py-4 px-4 py-2 font-semibold text-[#7632F9]">
+              For Engineers
+            </span>
+            <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
+              What You’ll Work On as an Engineer in the Pool
+            </h2>
+            <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
+              Engineers gain experience building scalable data platforms that
+              support AI and analytics workloads, working across Data, Data
+              Platform, and Machine Learning engineering.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="relative mx-auto max-w-300 lg:h-212.5">
-          <div className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full lg:w-132 px-6 lg:px-0 lg:mb-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{ duration: 0.8 }}
+            className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full lg:w-132 px-6 lg:px-0 lg:mb-0"
+          >
             <div className="aspect-square lg:w-132 lg:h-132 overflow-hidden shadow-sm">
               <img
                 src="/assets/forEngineersImage.png"
@@ -67,12 +80,20 @@ const ForEngineers = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-          </div>
+          </motion.div>
 
           <div className="flex lg:block overflow-x-auto lg:overflow-visible snap-x snap-mandatory no-scrollbar px-6 lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
             {categories.map((card, idx) => (
-              <div
+              <motion.div
                 key={idx}
+                initial={card.initial}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{
+                  duration: 0.6,
+                  delay: idx * 0.2,
+                  ease: "easeOut",
+                }}
                 className={`
                   shrink-0 snap-center w-73.5 lg:w-98 
                   lg:absolute ${card.position}
@@ -108,7 +129,7 @@ const ForEngineers = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
