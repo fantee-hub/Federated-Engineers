@@ -81,11 +81,23 @@ const Nav = () => {
         />
       </div>
 
+      <div className="lg:hidden flex items-center justify-center border-r border-gray-100">
+        <div
+          className="h-full w-4 bg-no-repeat"
+          style={{
+            backgroundImage: 'url("/assets/navbarline1.svg")',
+            backgroundSize: "cover",
+          }}
+        />
+      </div>
+
       <div className="flex flex-1 lg:flex-none items-center gap-3 border-r border-[#E6E6E6] px-4 bg-white z-60">
-        <Image src={logo} alt="Logo" width={32} height={32} />
-        <span className="whitespace-nowrap text-lg lg:text-xl font-semibold text-[#471E95]">
-          Federated Engineers
-        </span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image src={logo} alt="Logo" width={32} height={32} />
+          <span className="whitespace-nowrap text-lg lg:text-xl font-semibold text-[#471E95]">
+            Federated Engineers
+          </span>
+        </Link>
       </div>
 
       <div className="hidden lg:flex items-center border-r border-gray-100">
@@ -127,13 +139,32 @@ const Nav = () => {
         </Link>
       </div>
 
-      <div className="flex lg:hidden items-center px-4 border-l border-[#E6E6E6] bg-white z-60">
+      <div className="hidden lg:flex flex-1 items-center justify-center border-r border-gray-100">
+        <div
+          className="h-full w-full bg-no-repeat"
+          style={{
+            backgroundImage: 'url("/assets/navbarline1.svg")',
+            backgroundSize: "cover",
+          }}
+        />
+      </div>
+
+      <div className="flex lg:hidden items-center px-2 border-l-0.5 border-[#E6E6E6] bg-white z-60">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-[#2E2E2E] p-2"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+      </div>
+      <div className="lg:hidden flex items-center justify-center border-r border-gray-100">
+        <div
+          className="h-full w-4 bg-no-repeat"
+          style={{
+            backgroundImage: 'url("/assets/navbarline1.svg")',
+            backgroundSize: "cover",
+          }}
+        />
       </div>
 
       <AnimatePresence>
@@ -145,7 +176,7 @@ const Nav = () => {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 top-18 bg-white z-50 flex flex-col"
             style={{
-              backgroundImage: 'url("/assets/navbarline1.svg")',
+              backgroundImage: 'url("/assets/mobile-navbar-line.svg")',
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-y",
             }}
@@ -159,7 +190,7 @@ const Nav = () => {
                     handleSmoothScroll(e, link.href);
                     setIsOpen(false);
                   }}
-                  className="px-8 py-6 text-lg text-[#2E2E2E] border-b border-gray-50 active:bg-gray-50"
+                  className="px-8 py-4 text-base text-[#2E2E2E] border-b border-gray-50 active:bg-gray-50"
                 >
                   {link.name}
                 </Link>
@@ -172,7 +203,7 @@ const Nav = () => {
               <Link
                 href="/hire"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between px-8 py-6 text-[#7632F9] font-semibold border-b border-[#E6E6E6]"
+                className="flex items-center justify-between text-lg px-8 py-4 text-[#7632F9] font-semibold border-b border-[#E6E6E6]"
               >
                 Hire From The Pool
                 <ArrowRight size={20} />
@@ -180,12 +211,13 @@ const Nav = () => {
               <Link
                 href="/join"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between px-8 py-6 bg-[#7632F9] text-white font-semibold"
+                className="flex items-center justify-between text-lg px-8 py-4 bg-[#7632F9] text-white font-semibold"
               >
                 Join The Pool
                 <ArrowRight size={20} />
               </Link>
             </div>
+            <div className="grow" />
           </motion.div>
         )}
       </AnimatePresence>
