@@ -2,7 +2,7 @@
 import { TextSwitcher } from "./TextSwitcher";
 import { TaskCard } from "./TaskCard";
 import { FloatingCloud } from "./FloatingCloud";
-import { ArrowRight, Scroll } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "../../ScrollReveal";
 import { motion } from "framer-motion";
 
