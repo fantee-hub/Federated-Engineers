@@ -90,17 +90,20 @@ const ReadyToBuild = () => {
               better opportunities.
             </p>
           </ScrollReveal>
-
-          <ScrollReveal>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-[#7632F9] mb-10 gap-2 lg:mb-0 text-lg lg:w-45 h-15 w-full flex items-center justify-center rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition-colors shadow-lg"
-            >
-              Join The Pool
-              <ArrowRight className="lg:hidden block" />
-            </motion.button>
-          </ScrollReveal>
+          <div className="w-full lg:flex lg:justify-center">
+            <ScrollReveal>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full self-stretch lg:w-45 h-15 bg-white text-[#7632F9] mb-10 lg:mb-0
+             flex items-center justify-center gap-2 rounded-lg font-semibold
+             cursor-pointer hover:bg-gray-100 transition-colors shadow-lg"
+              >
+                Join The Pool
+                <ArrowRight className="lg:hidden block" />
+              </motion.button>
+            </ScrollReveal>
+          </div>
 
           <motion.div
             initial={{ y: -20, opacity: 0 }}
