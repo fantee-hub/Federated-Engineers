@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const OurMission = () => {
   return (
-    <section className="w-full bg-white page relative">
+    <section className="w-full bg-white page relative overflow-hidden">
       <div className="absolute border-[#E6E6E6] border-b w-full bottom-0"></div>
       <div className="lg:border-x lg:border-[#E6E6E6] mx-auto max-w-300">
         <div className=" w-full  gap-px lg:border-t border-[#E6E6E6]">
