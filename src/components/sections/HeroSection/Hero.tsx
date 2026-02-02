@@ -52,17 +52,12 @@ const Hero = () => {
                 Hire From The Pool
                 <ArrowRight size={20} />
               </button>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-              >
-                <FloatingCloud
-                  src="/assets/cloud aesthetics 3.svg"
-                  className="-bottom-14 left-[60%] -z-10  lg:block"
-                  delay={2}
-                />
-              </motion.div>
+
+              <FloatingCloud
+                src="/assets/cloud aesthetics 3.svg"
+                className="-bottom-14 left-[60%] -z-20  lg:block"
+                delay={2}
+              />
             </div>
           </ScrollReveal>
         </div>

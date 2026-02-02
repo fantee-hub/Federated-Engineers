@@ -1,9 +1,31 @@
 "use client";
 import { Check } from "lucide-react";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { ScrollReveal } from "../../ScrollReveal";
 
 const ForEngineers = () => {
+  const cardVariants: Variants = {
+    hidden: (initialPos: any) => ({
+      opacity: 0,
+      x:
+        typeof window !== "undefined" && window.innerWidth < 1024
+          ? 0
+          : initialPos.x || 0,
+      y:
+        typeof window !== "undefined" && window.innerWidth < 1024
+          ? 10
+          : initialPos.y || 0,
+    }),
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
   const categories = [
     {
       role: "Data Platform Engineers",
@@ -15,7 +37,7 @@ const ForEngineers = () => {
         "Tune compute, storage, and cloud resources for efficiency and reliability.",
         "Supporting cross-functional teams across the pool",
       ],
-      initial: { opacity: 0, y: -50 },
+      initial: { y: -50 },
       position: "lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:z-20",
     },
     {
@@ -28,7 +50,7 @@ const ForEngineers = () => {
         "Ensuring data quality, reliability, and accessibility",
         "Collaborating with ML engineers to provide training-ready data",
       ],
-      initial: { opacity: 0, x: -50 },
+      initial: { x: -50 },
       position: "lg:bottom-0 lg:left-20 lg:z-20",
     },
     {
@@ -41,7 +63,7 @@ const ForEngineers = () => {
         "Monitoring performance and refining workflows",
         "Collaborating with platform engineers to ensure scalable systems",
       ],
-      initial: { opacity: 0, x: 50 },
+      initial: { x: 50 },
       position: "lg:bottom-0 lg:right-20 lg:z-20",
     },
   ];
@@ -67,7 +89,7 @@ const ForEngineers = () => {
 
         <div className="relative mx-auto max-w-300 lg:h-212.5">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false, amount: 0.4 }}
             transition={{ duration: 0.8 }}
@@ -86,14 +108,11 @@ const ForEngineers = () => {
             {categories.map((card, idx) => (
               <motion.div
                 key={idx}
-                initial={card.initial}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{
-                  duration: 0.6,
-                  delay: idx * 0.2,
-                  ease: "easeOut",
-                }}
+                custom={card.initial}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
                 className={`
                   shrink-0 snap-center w-73.5 lg:w-98 
                   lg:absolute ${card.position}

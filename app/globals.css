@@ -37,3 +37,13 @@ html {
 .font-mori {
   font-family: var(--font-pp-mori), sans-serif;
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
