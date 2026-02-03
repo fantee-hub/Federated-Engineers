@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const ROLES: string[] = [
   "Data Platform Engineers",
-  "Machine Learning Engineers",
   "Data Engineers",
+  "Machine Learning Engineers",
 ];
 
 export const TextSwitcher = () => {
