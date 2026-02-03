@@ -11,7 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-mori: var(--font-pp-mori);
-  --container-max: 1520px;
+  --container-max: 2120px;
 }
 
 @media (prefers-color-scheme: dark) {

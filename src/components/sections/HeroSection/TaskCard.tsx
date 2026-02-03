@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 interface MarqueeItem {
   text: string;
+  name?: string;
   icon?: string;
 }
 
@@ -45,7 +46,16 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
                 />
               )}
             </div>
-            {item.text}
+            <div className="flex flex-col">
+              <div>
+                {item.name && (
+                  <span className="block text-sm font-semibold text-gray-800">
+                    {item.name}
+                  </span>
+                )}
+              </div>
+              <div>{item.text}</div>
+            </div>
           </div>
         ))}
       </motion.div>
@@ -83,17 +93,38 @@ export const TaskCard = () => {
     2: {
       title: "Businesses hire from our pool",
       row1: [
-        { text: "Data Engineers", icon: "/assets/business-avatar1.svg" },
-        { text: "Analytics Engineers", icon: "/assets/business-avatar2.svg" },
-        { text: "Platform Engineers", icon: "/assets/business-avatar1.svg" },
+        {
+          text: "Data Engineer",
+          icon: "/assets/business-avatar1.svg",
+          name: "Jessica Bones",
+        },
+        {
+          text: "Data Engineer",
+          icon: "/assets/business-avatar1.svg",
+          name: "Jessica Bones",
+        },
+        {
+          text: "Machine Learning Engineer",
+          icon: "/assets/business-avatar2.svg",
+          name: "Alex John",
+        },
       ],
       row2: [
-        { text: "Data Engineers", icon: "/assets/business-avatar2.svg" },
         {
-          text: "Machine Learning Engineers",
+          text: "Data Engineers",
           icon: "/assets/business-avatar2.svg",
+          name: "Jessica Bones",
         },
-        { text: "Platform Engineers", icon: "/assets/business-avatar1.svg" },
+        {
+          text: "Machine Learning Engineer",
+          icon: "/assets/business-avatar2.svg",
+          name: "Alex John",
+        },
+        {
+          text: "Data Engineer",
+          icon: "/assets/business-avatar1.svg",
+          name: "Jessica Bones",
+        },
       ],
     },
   };
