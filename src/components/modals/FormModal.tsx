@@ -71,15 +71,14 @@ export const FormModal = ({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={handleClose}
-        className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm cursor-pointer"
+        className="fixed inset-0 z-100 flex items-center justify-center lg:p-4 bg-black/50 backdrop-blur-sm cursor-pointer"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="bg-white rounded-2xl shadow-2xl relative cursor-default flex flex-col overflow-hidden"
-          style={{ width: "600px", height: "876px", maxHeight: "95vh" }}
+          className="bg-white lg:rounded-2xl lg:shadow-2xl relative cursor-default flex flex-col overflow-hidden lg:w-150 lg:h-219 lg:max-h-[95vh] w-full h-full"
         >
           <div
             className="h-18 bg-[#FDFDFF] border-b border-gray-100 flex shrink-0 justify-end items-center px-6"
