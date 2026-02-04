@@ -5,8 +5,11 @@ import { FloatingCloud } from "./FloatingCloud";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "../../ScrollReveal";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const Hero = () => {
+  const dispatch = useDispatch();
   return (
     <section className="relative min-h-[calc(100vh-72px)] 2xl:min-h-0 2xl:py-30 flex flex-col justify-center items-center w-full overflow-hidden bg-[#180A32]  text-white page">
       <div className="w-full lg:pl-20 ">
@@ -45,11 +48,17 @@ const Hero = () => {
 
             <ScrollReveal delay={0.4}>
               <div className="flex flex-col lg:flex-row gap-4 relative mt-8 ">
-                <button className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110">
+                <button
+                  onClick={() => dispatch(openModal("join"))}
+                  className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110"
+                >
                   Join The Pool
                   <ArrowRight size={20} />
                 </button>
-                <button className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 border border-[#7632F9] bg-[#180A32] cursor-pointer px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30">
+                <button
+                  onClick={() => dispatch(openModal("hire"))}
+                  className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 border border-[#7632F9] bg-[#180A32] cursor-pointer px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30"
+                >
                   Hire From The Pool
                   <ArrowRight size={20} />
                 </button>
