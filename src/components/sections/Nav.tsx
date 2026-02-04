@@ -203,22 +203,26 @@ const Nav = () => {
             <div className="grow" />
 
             <div className="flex flex-col border-t border-[#E6E6E6] bg-white">
-              <Link
-                href="/hire"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between text-lg px-8 py-4 text-[#7632F9] font-semibold border-b border-[#E6E6E6]"
+              <button
+                onClick={() => {
+                  dispatch(openModal("hire"));
+                  setIsOpen(false);
+                }}
+                className="flex items-center justify-between text-lg px-8 py-4 text-[#7632F9] font-semibold border-b border-[#E6E6E6] cursor-pointer"
               >
                 Hire From The Pool
                 <ArrowRight size={20} />
-              </Link>
-              <Link
-                href="/join"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between text-lg px-8 py-4 bg-[#7632F9] text-white font-semibold"
+              </button>
+              <button
+                onClick={() => {
+                  dispatch(openModal("join"));
+                  setIsOpen(false);
+                }}
+                className="flex items-center justify-between text-lg px-8 py-4 bg-[#7632F9] text-white font-semibold cursor-pointer"
               >
                 Join The Pool
                 <ArrowRight size={20} />
-              </Link>
+              </button>
             </div>
             <div className="grow" />
           </motion.div>
