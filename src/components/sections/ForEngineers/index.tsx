@@ -104,7 +104,7 @@ const ForEngineers = () => {
             </div>
           </motion.div>
 
-          <div className="flex lg:block overflow-x-auto lg:overflow-visible snap-x snap-proximity no-scrollbar pl-6 pr-[25%] lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
+          <div className="flex lg:block overflow-x-auto overflow-y-hidden lg:overflow-visible snap-x snap-proximity no-scrollbar pl-6 pr-[25%] lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
             {categories.map((card, idx) => (
               <motion.div
                 key={idx}
