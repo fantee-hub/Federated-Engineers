@@ -1,8 +1,11 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const OurMission = () => {
+  const dispatch = useDispatch();
   return (
     <section className="w-full bg-white page relative overflow-hidden">
       <div className="absolute border-[#E6E6E6] border-b w-full bottom-0"></div>
@@ -51,6 +54,8 @@ const OurMission = () => {
 
                   <motion.button
                     whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => dispatch(openModal("join"))}
                     className=" gap-2 rounded-lg bg-[#7632F9] lg:w-49.5 w-full h-14 flex items-center lg:justify-center justify-between px-4 lg:px-0 font-semibold text-white transition-all hover:brightness-110 cursor-pointer"
                   >
                     Join Our Pool <ArrowRight size={20} />
