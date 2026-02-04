@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "../../ScrollReveal";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const ReadyToBuild = () => {
   const industryIcons = [
@@ -19,6 +21,8 @@ const ReadyToBuild = () => {
     "/assets/icons/solar-graph.svg",
     "/assets/icons/material-symbols.svg",
   ];
+
+  const dispatch = useDispatch();
   return (
     <section className="w-full bg-white border-b border-t lg:border-t-0 border-[#E6E6E6] page px-4 lg:px-0">
       <div className="w-full flex justify-center gap-px mx-auto max-w-300">
@@ -95,6 +99,9 @@ const ReadyToBuild = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  dispatch(openModal("join"));
+                }}
                 className="w-full self-stretch lg:w-45 h-15 bg-white text-[#7632F9] mb-10 lg:mb-0
              flex items-center justify-center gap-2 rounded-lg font-semibold
              cursor-pointer hover:bg-gray-100 transition-colors shadow-lg"
