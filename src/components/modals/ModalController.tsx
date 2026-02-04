@@ -55,7 +55,7 @@ export const ModalController = () => {
               <CustomSelect
                 label="Primary Engineering Role"
                 options={[
-                  "Data Platoform Engineer",
+                  "Data Platform Engineer",
                   "Data Engineer",
                   "Machine Leanring Engineer",
                 ]}
@@ -122,10 +122,9 @@ export const ModalController = () => {
               <CustomSelect
                 label="Engineering Role Needed"
                 options={[
+                  "Data Platform Engineer",
                   "Data Engineer",
-                  "Frontend Engineer",
-                  "Backend Engineer",
-                  "Fullstack Engineer",
+                  "Machine Leanring Engineer",
                 ]}
                 value={formData.role}
                 onChange={(val) => setFormData({ ...formData, role: val })}
