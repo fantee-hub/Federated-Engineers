@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const Footer = () => {
+  const dispatch = useDispatch();
   return (
     <footer className="w-full bg-[#180A32] lg:py-20 py-10 page">
       <div className="mx-auto max-w-300 lg:px-6 px-4">
@@ -16,10 +19,16 @@ const Footer = () => {
               and AI work.
             </p>
             <div className="flex flex-wrap gap-4 px-6 lg:px-0">
-              <button className="rounded-lg bg-white lg:w-44 w-full h-15 flex items-center justify-center font-semibold text-lg text-[#7632F9] cursor-pointer ease-in-out transition-transform hover:scale-105">
+              <button
+                onClick={() => dispatch(openModal("join"))}
+                className="rounded-lg bg-white lg:w-44 w-full h-15 flex items-center justify-center font-semibold text-lg text-[#7632F9] cursor-pointer ease-in-out transition-transform hover:scale-105"
+              >
                 Join the Pool
               </button>
-              <button className="rounded-lg border-2 border-white lg:w-39.25 w-full h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10">
+              <button
+                onClick={() => dispatch(openModal("hire"))}
+                className="rounded-lg border-2 border-white lg:w-39.25 w-full h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10"
+              >
                 Hire Talent
               </button>
             </div>
