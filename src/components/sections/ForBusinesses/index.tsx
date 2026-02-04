@@ -2,8 +2,11 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "../../ScrollReveal";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const ForBusinesses = () => {
+  const dispatch = useDispatch();
   return (
     <section className="w-full bg-white border-y border-[#E6E6E6]  page lg:mt-20 mt-10 px-4 lg:px-0">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
@@ -26,6 +29,7 @@ const ForBusinesses = () => {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
+              onClick={() => dispatch(openModal("hire"))}
               className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-[#7632F9] lg:w-48.25 w-full h-15 font-semibold text-white text-lg transition-all hover:brightness-110 cursor-pointer shadow-purple-200"
             >
               Contact Us <ArrowRight size={20} />
