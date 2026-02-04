@@ -6,14 +6,14 @@ import { ScrollReveal } from "../../ScrollReveal";
 const ForEngineers = () => {
   const cardVariants: Variants = {
     hidden: (initialPos: any) => ({
-      opacity: 0,
+      opacity: 1,
       x:
-        typeof window !== "undefined" && window.innerWidth < 1024
-          ? 0
-          : initialPos.x || 0,
+        typeof window !== "undefined" && window.innerWidth >= 1024
+          ? initialPos.x || 0
+          : 0,
       y:
         typeof window !== "undefined" && window.innerWidth < 1024
-          ? 10
+          ? 20
           : initialPos.y || 0,
     }),
     visible: {
@@ -89,8 +89,8 @@ const ForEngineers = () => {
 
         <div className="relative mx-auto max-w-300 lg:h-212.5">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: false, amount: 0.4 }}
             transition={{ duration: 0.8 }}
             className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full lg:w-132 px-6 lg:px-0 lg:mb-0"
@@ -104,7 +104,7 @@ const ForEngineers = () => {
             </div>
           </motion.div>
 
-          <div className="flex lg:block overflow-x-auto lg:overflow-visible snap-x snap-mandatory no-scrollbar px-6 lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
+          <div className="flex lg:block overflow-x-auto lg:overflow-visible snap-x snap-proximity no-scrollbar pl-6 pr-[25%] lg:px-0 gap-4 pb-4 -mt-24 lg:mt-0">
             {categories.map((card, idx) => (
               <motion.div
                 key={idx}

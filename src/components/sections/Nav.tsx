@@ -6,11 +6,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/src/lib/redux/slices/modalSlice";
 
 const Nav = () => {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const navLinks = [
     { name: "What We Do", href: "/#what-we-do" },
@@ -125,18 +128,18 @@ const Nav = () => {
       </div>
 
       <div className="hidden lg:flex items-center">
-        <Link
-          href="/hire"
-          className="flex h-full items-center px-6 font-semibold text-[#7632F9] hover:bg-gray-50"
+        <button
+          onClick={() => dispatch(openModal("hire"))}
+          className="flex h-full items-center px-6 font-semibold text-[#7632F9] hover:bg-gray-50 cursor-pointer"
         >
           Hire
-        </Link>
-        <Link
-          href="/join"
-          className="flex h-full items-center bg-[#7632F9] px-6 font-semibold text-white transition-colors hover:bg-[#6428D8]"
+        </button>
+        <button
+          onClick={() => dispatch(openModal("join"))}
+          className="flex h-full items-center bg-[#7632F9] px-6 font-semibold text-white transition-colors cursor-pointer hover:bg-[#6428D8]"
         >
           Join
-        </Link>
+        </button>
       </div>
 
       <div className="hidden lg:flex flex-1 items-center justify-center border-r border-gray-100">

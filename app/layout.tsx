@@ -4,6 +4,10 @@ import { ppMori } from "./font";
 import "./globals.css";
 import Nav from "@/src/components/sections/Nav";
 import Footer from "@/src/components/sections/Footer";
+import { Provider } from "react-redux";
+import { store } from "@/src/lib/redux/store";
+import { ReduxProvider } from "@/src/lib/providers/ReduxProviders";
+import { ModalController } from "@/src/components/modals/ModalController";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +33,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ppMori.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ppMori.variable} antialiased font-mori`}
         suppressHydrationWarning
       >
-        <Nav />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <ModalController />
+          <Nav />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );
