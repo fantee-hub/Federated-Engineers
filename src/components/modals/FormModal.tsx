@@ -18,6 +18,7 @@ interface FormModalProps {
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   submitForm: (e: React.FormEvent) => void;
   isFormEmpty: boolean;
+  isSubmitting: boolean;
 }
 
 export const FormModal = ({
@@ -31,6 +32,7 @@ export const FormModal = ({
   setFormData,
   submitForm,
   isFormEmpty,
+  isSubmitting,
 }: FormModalProps) => {
   const dispatch = useDispatch();
   const { isOpen } = useSelector((state: RootState) => state.modal);
@@ -123,16 +125,41 @@ export const FormModal = ({
               <button
                 type="submit"
                 form={formId}
-                disabled={isFormEmpty}
-                className={` text-white h-full px-10 py-3.5  font-bold  transition-all cursor-pointer
-                ${
-                  isFormEmpty
-                    ? "bg-[#E6E6E6] text-white cursor-not-allowed"
-                    : "bg-[#7632F9] hover:bg-[#6428D8]"
-                }
-                `}
+                disabled={isFormEmpty || isSubmitting}
+                className={`text-white h-full px-10 py-3.5 font-bold transition-all flex items-center justify-center gap-2
+      ${
+        isFormEmpty || isSubmitting
+          ? "bg-[#E6E6E6] text-white cursor-not-allowed"
+          : "bg-[#7632F9] hover:bg-[#6428D8] cursor-pointer"
+      }`}
               >
-                {buttonText}
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    <span>Processing...</span>
+                  </>
+                ) : (
+                  buttonText
+                )}
               </button>
             </div>
           </div>

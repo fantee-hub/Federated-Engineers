@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 import { FormModal } from "./FormModal";
 import { CustomSelect } from "../ui/CustomSelect";
 import { RootState } from "@/src/lib/redux/store";
+import SuccessModal from "./SuccessModal";
+import { useDispatch } from "react-redux";
+import { closeModal } from "@/src/lib/redux/slices/modalSlice";
 
 export type FormData = {
   firstName: string;
@@ -34,6 +37,9 @@ const Input = ({
 export const ModalController = () => {
   const { view, isOpen } = useSelector((state: RootState) => state.modal);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const dispatch = useDispatch();
 
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -75,7 +81,7 @@ export const ModalController = () => {
       newErrors.email = "Email is invalid";
     }
 
-    if (!formData.companyName.trim()) {
+    if (view === "hire" && !formData.companyName.trim()) {
       newErrors.companyName = "Company name is required";
     }
 
@@ -95,36 +101,60 @@ export const ModalController = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const submitForm = (e: React.FormEvent) => {
+  const submitForm = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!validateForm()) return;
+    setIsSubmitted(true);
 
-    if (view === "join") {
-      const formJoinData = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        role: formData.role,
-        experience: formData.experience,
-      };
-      console.log("Joining with data:", formJoinData);
-    }
-    if (view === "hire") {
-      const formHireData = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        companyName: formData.companyName,
-        description: formData.description,
-        role: formData.role,
-        experience: formData.experience,
-      };
-      console.log("Hiring with data:", formHireData);
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          type: view,
+        }),
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setErrors({});
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          companyName: "",
+          description: "",
+          profileLink: "",
+          role: "",
+          experience: "",
+        });
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error}`);
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitted(false);
     }
   };
 
   if (!isOpen) return null;
+
+  if (showSuccess) {
+    return (
+      <SuccessModal
+        type={view}
+        onClose={() => {
+          setShowSuccess(false);
+          setIsSubmitted(false);
+          setErrors({});
+          dispatch(closeModal());
+        }}
+      />
+    );
+  }
 
   return (
     <>
@@ -139,6 +169,7 @@ export const ModalController = () => {
           setFormData={setFormData}
           submitForm={submitForm}
           isFormEmpty={isFormEmpty}
+          isSubmitting={isSubmitted}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -176,6 +207,9 @@ export const ModalController = () => {
                 placeholder="forexample@gmail.com"
                 value={formData.email}
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <CustomSelect
@@ -188,6 +222,9 @@ export const ModalController = () => {
                 value={formData.role}
                 onChange={(val) => setFormData({ ...formData, role: val })}
               />
+              {errors.role && (
+                <p className="mt-1 text-sm text-red-500">{errors.role}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <CustomSelect
@@ -198,6 +235,9 @@ export const ModalController = () => {
                   setFormData({ ...formData, experience: val })
                 }
               />
+              {errors.experience && (
+                <p className="mt-1 text-sm text-red-500">{errors.experience}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <Input
@@ -221,6 +261,11 @@ export const ModalController = () => {
                   setFormData({ ...formData, description: e.target.value })
                 }
               />
+              {errors.description && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.description}
+                </p>
+              )}
             </div>
           </div>
         </FormModal>
@@ -237,20 +282,31 @@ export const ModalController = () => {
           setFormData={setFormData}
           submitForm={submitForm}
           isFormEmpty={isFormEmpty}
+          isSubmitting={isSubmitted}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input
-              onChange={(e) => handleChange("firstName", e.target.value)}
-              value={formData.firstName}
-              label="First Name"
-              placeholder="Enter your first name"
-            />
-            <Input
-              onChange={(e) => handleChange("lastName", e.target.value)}
-              label="Last Name"
-              value={formData.lastName}
-              placeholder="Enter your last name"
-            />
+            <div>
+              <Input
+                onChange={(e) => handleChange("firstName", e.target.value)}
+                value={formData.firstName}
+                label="First Name"
+                placeholder="Enter your first name"
+              />
+              {errors.firstName && (
+                <p className="mt-1 text-sm text-red-500">{errors.firstName}</p>
+              )}
+            </div>
+            <div>
+              <Input
+                onChange={(e) => handleChange("lastName", e.target.value)}
+                label="Last Name"
+                value={formData.lastName}
+                placeholder="Enter your last name"
+              />
+              {errors.lastName && (
+                <p className="mt-1 text-sm text-red-500">{errors.lastName}</p>
+              )}
+            </div>
             <div className="md:col-span-2">
               <Input
                 label="Work Email"
@@ -259,6 +315,9 @@ export const ModalController = () => {
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <Input
@@ -267,6 +326,11 @@ export const ModalController = () => {
                 onChange={(e) => handleChange("companyName", e.target.value)}
                 value={formData.companyName}
               />
+              {errors.companyName && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.companyName}
+                </p>
+              )}
             </div>
             <div className="md:col-span-2">
               <CustomSelect
@@ -279,6 +343,9 @@ export const ModalController = () => {
                 value={formData.role}
                 onChange={(val) => setFormData({ ...formData, role: val })}
               />
+              {errors.role && (
+                <p className="mt-1 text-sm text-red-500">{errors.role}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <CustomSelect
@@ -289,6 +356,9 @@ export const ModalController = () => {
                   setFormData({ ...formData, experience: val })
                 }
               />
+              {errors.experience && (
+                <p className="mt-1 text-sm text-red-500">{errors.experience}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <Input
@@ -297,6 +367,11 @@ export const ModalController = () => {
                 value={formData.description}
                 onChange={(e) => handleChange("description", e.target.value)}
               />
+              {errors.description && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.description}
+                </p>
+              )}
             </div>
           </div>
         </FormModal>
