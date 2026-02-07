@@ -26,7 +26,7 @@ const services = [
   {
     title: "Data Platforms",
     description:
-      "We build scalable data platforms for ingestion, transformation, and access, giving engineers hands-on experience and businesses reliable systems.",
+      "We build high-performance data platforms that bridge the gap between raw data and actionable insights, providing engineers with practical experience and businesses with reliable systems.",
     icons: [
       "/assets/icons/apache.svg",
       "/assets/icons/cluster.svg",
@@ -37,9 +37,9 @@ const services = [
     ],
   },
   {
-    title: "AI Platforms",
+    title: "Data Pipelines",
     description:
-      "We build AI-ready systems for deployment, automation, and monitoring, giving engineers practical integration experience and businesses production-focused AI solutions.",
+      "We build reliable Batch and Streaming ingestion, providing Engineers with production-grade workflow experience and businesses with high-integrity data systems.",
     icons: [
       "/assets/tenorflow.svg",
       "/assets/icons/unnamed-icon1.svg",
@@ -50,9 +50,9 @@ const services = [
     ],
   },
   {
-    title: "ML Infrastructure & Workflows",
+    title: "AI Platform",
     description:
-      "We build pipelines and tools for training, evaluating, deploying, and maintaining models, giving engineers real ML workflow experience and companies reliable processes.",
+      "We build AI-ready infrastructure that bridges the gap between development and production, providing engineers with deep integration expertise and delivering automated, monitorable AI systems for businesses.",
     icons: [
       "/assets/icons/kubeflow.svg",
       "/assets/tenorflow.svg",
@@ -61,9 +61,9 @@ const services = [
     ],
   },
   {
-    title: "Analytics Environments",
+    title: "ML Infrastructures & Workflows",
     description:
-      "We build analytics systems that enable data-driven decisions, giving engineers real analytics experience and companies reliable insight infrastructure.",
+      "We engineer end-to-end MLOps platforms that automate the training, evaluation, and deployment of models, equipping engineers with authentic machine learning workflow experience and businesses with robust, production-ready processes",
     icons: [
       "/assets/insights.svg",
       "/assets/icons/power-bi.svg",
@@ -76,7 +76,7 @@ const services = [
   {
     title: "Cloud Architecture",
     description:
-      "We design cloud systems that balance performance and cost, giving engineers practical cloud architecture experience and companies efficient, scalable infrastructure.",
+      "We architect cost-optimized cloud systems and secure networking infrastructures that maximize performance, providing engineers with hands-on architectural experience and businesses with resilient, scalable, and efficient environments.",
     icons: [
       "/assets/icons/aws.svg",
       "/assets/icons/google-cloud.svg",
@@ -87,9 +87,9 @@ const services = [
     ],
   },
   {
-    title: "Cross-Discipline Integration",
+    title: "Cross Functional Learning",
     description:
-      "We connect Data, Machine Learning, and Platform Engineering into unified platforms, giving engineers production-ready experience and companies end-to-end solutions.",
+      "We unify Data, Machine Learning, and Platform Engineering to create a cross-functional environment where engineers master production workflows and businesses get integrated solutions.",
     icons: [
       "/assets/icons/github.svg",
       "/assets/icons/jira.svg",
