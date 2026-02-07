@@ -6,30 +6,34 @@ import { ScrollReveal } from "../../ScrollReveal";
 
 const faqs = [
   {
-    question: "What is the engineering pool and who is it for?",
+    question: "What is Federated Engineers?",
     answer:
-      "The pool is a collaborative group of data, ML, platform, and analytics engineers who work together on building data and AI systems. It’s for engineers seeking structured, hands-on work experience and for businesses needing vetted technical talent.",
+      "Federated Engineers is a collaborative engineering pool where Data, Data Platform, and Machine Learning engineers build production-ready data platforms that support AI and analytics workloads, gaining real-world, cross-functional experience.",
   },
   {
-    question: "What experience do engineers gain by joining the pool?",
+    question: "Who is Federated Engineers for?",
     answer:
-      "Engineers work on data and ai building projects across data, ML, platform, and analytics engineering, following shared standards and collaborating with skilled peers to build systems used by businesses.",
+      "Federated Engineers is for engineers who want to move beyond tutorials and local projects — whether you’ve just finished school, completed a bootcamp, or want to level up your skills by working on real production systems.",
   },
   {
-    question: "How are engineers vetted before joining?",
+    question: "What kind of experience will I gain in the pool?",
     answer:
-      "Every engineer goes through a structured assessment including technical evaluations, interviews, and collaboration checks to ensure they meet the engineering and teamwork standards expected in the pool.",
+      "You’ll work on scalable, production-aligned systems alongside other engineers, learning how real platform dependencies, reliability, and cross-team collaboration work in production.",
   },
   {
-    question:
-      "What kind of engineering talent can businesses hire from the pool?",
+    question: "Do I need my own cloud account or tools to join?",
     answer:
-      "Businesses can access vetted engineers across data platform development, AI platforms, ML engineering, analytics engineering, and cloud architecture — all trained to work collaboratively and follow consistent engineering practices.",
+      "No. Federated Engineers provides the infrastructure, tooling, and environment you need. You focus on building and learning without worrying about setup or cloud costs.",
   },
   {
-    question: "How does the process work for joining or hiring from the pool?",
+    question: "How does the onboarding process work?",
     answer:
-      "Engineers apply and go through vetting before joining. Businesses share their requirements, and we match them with engineers who fit the needed skills and engineering standards. Once matched, work begins through shared workflows and structured procedures.",
+      "Engineers apply, complete a practical task to demonstrate production competency, defend their work, and join the pool once approved.",
+  },
+  {
+    question: "Can businesses hire engineers from the pool?",
+    answer:
+      "Yes. Businesses can contact Federated Engineers to access vetted, production-competent engineers trained on real, scalable data platforms.",
   },
 ];
 

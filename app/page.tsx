@@ -27,7 +27,7 @@ export default function Home() {
         <ForBusinesses />
       </div>
 
-      <FAQSection className="border-y border-[#E6E6E6] lg:my-20 my-10" />
+      <FAQSection className="border-y border-[#E6E6E6] lg:mt-0 lg:mb-20 mb-10 mt-0" />
     </div>
   );
 }
