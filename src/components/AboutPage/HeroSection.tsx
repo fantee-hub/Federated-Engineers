@@ -15,22 +15,16 @@ const HeroSection = () => {
 
           <ScrollReveal delay={0.2}>
             <h2 className="max-w-4xl mt-6 lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
-              Bridging the Gap Between Local <br /> Learning and Production.
+              Accelerating the journey from local <br /> sandbox to
+              production-scale reality.
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <p className="max-w-124 pt-2 text-[#5C5C5C] lg:text-lg">
-              At{" "}
-              <span className="font-semibold text-[#000000]">
-                Federated Engineers
-              </span>
-              , we simulate the high-stakes reality of building modern
-              <span className="font-semibold text-[#000000]">
-                {" "}
-                Data Platforms
-              </span>{" "}
-              that power Data and AI products.
+            <p className="max-w-186.5 pt-2 text-[#5C5C5C] lg:text-lg">
+              Federated Engineers provides a high-fidelity mirror of production
+              ecosystems, allowing Engineers to master the complexities of live
+              Data Platforms behind Analytics and Artificial Intelligence.
             </p>
           </ScrollReveal>
         </div>
@@ -83,38 +77,35 @@ const HeroSection = () => {
             <div className="max-w-260 space-y-6">
               <ScrollReveal delay={0.4}>
                 <p className="lg:text-[20px] text-lg leading-8 text-[#2E2E2E]">
-                  In an era where data volume has surpassed{" "}
+                  The global datasphere is surging, projected to reach a
+                  staggering{" "}
                   <span className="font-semibold text-[#000000]">
-                    221 zettabytes
+                    221 zettabytes.
                   </span>{" "}
-                  and Agentic AI is rewriting the rules of the workforce,
-                  traditional bootcamps are doing their best with first hand
-                  exposure, but the{" "}
+                  This explosion of data, driven by the rise of{" "}
                   <span className="font-semibold text-[#000000]">
-                    bigger picture (PRODUCTION) is missing
+                    Agentic AI,
+                  </span>{" "}
+                  has made Data Domain Engineers sought after—no longer a
+                  luxury, but a foundational requirement for modern enterprises.
+                  Despite this massive and growing demand, a critical obstacle
+                  persists:{" "}
+                  <span className="font-semibold text-[#000000]">
+                    The Production Gap.
                   </span>
-                  , hence bootcamps are no longer enough.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.5}>
                 <p className="lg:text-[20px] text-lg leading-8 text-[#2E2E2E]">
-                  Federated Engineers provide the{" "}
                   <span className="font-semibold text-[#000000]">
-                    "missing year"
+                    Self-Learners
                   </span>{" "}
-                  of experience through immersive,{" "}
-                  <span className="font-semibold text-[#000000]">
-                    production-grade
-                  </span>{" "}
-                  simulations of building varieties of{" "}
-                  <span className="font-semibold text-[#000000]">
-                    Data Platforms
-                  </span>{" "}
-                  that support not only Analytics, but also{" "}
-                  <span className="font-semibold text-[#000000]">
-                    Artificial Intelligence (AI)
-                  </span>
-                  .
+                  often gain a strong theoretical grasp of tools but falter when
+                  confronted with the complexities of scale. Meanwhile, many
+                  engineers get hands-on coding experience but lack production
+                  visibility—the high-stakes reality of managing live Data
+                  Platforms where a single misstep can result in thousands in
+                  cloud expenditure or cripple a downstream AI model.
                 </p>
               </ScrollReveal>
             </div>
