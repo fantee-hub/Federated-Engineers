@@ -159,7 +159,7 @@ const ProductionGap = () => {
         <div className="lg:hidden border-t border-[#E6E6E6]">
           {/* Sticky Header */}
           <div className="sticky top-18 z-20 flex grid-cols-2 bg-white border-b border-[#E6E6E6]">
-            <div className="flex-1 p-4 text-center text-sm font-semibold text-black ">
+            <div className="flex-1 p-4 text-center text-sm font-semibold text-black bg-[#FAFAFA]">
               The "Self-Learner" <br /> Project
             </div>
             <div className="flex-1 p-4 text-center text-sm font-bold text-white bg-[#7632F9]">
