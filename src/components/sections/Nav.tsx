@@ -128,17 +128,17 @@ const Nav = () => {
       </div>
 
       <div className="hidden lg:flex items-center">
-        <button
+        {/* <button
           onClick={() => dispatch(openModal("hire"))}
           className="flex h-full items-center px-6 font-semibold text-[#7632F9] hover:bg-gray-50 cursor-pointer"
         >
           Hire
-        </button>
+        </button> */}
         <button
           onClick={() => dispatch(openModal("join"))}
           className="flex h-full items-center bg-[#7632F9] px-6 font-semibold text-white transition-colors cursor-pointer hover:bg-[#6428D8]"
         >
-          Join
+          Join The Pool
         </button>
       </div>
 
