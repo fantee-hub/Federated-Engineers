@@ -77,53 +77,92 @@ export const TaskCard = () => {
     1: {
       title: "Engineers do tasks like",
       row1: [
-        { text: "Build & train ML models", icon: "/assets/tenorflow.svg" },
-        { text: "Deploy model services", icon: "/assets/deply.svg" },
-        { text: "Build insights dashboards", icon: "/assets/insights.svg" },
+        {
+          text: "Establishing & Implement cost-effective cloud infrastructures.",
+          icon: "/assets/icons/unnamed-icon2.svg",
+        },
+        {
+          text: "Develop and deploy Machine Learning (ML) models.",
+          icon: "/assets/tenorflow.svg",
+        },
+        {
+          text: "Create internal Data observability systems.",
+          icon: "/assets/icons/grafana.svg",
+        },
+        {
+          text: "Setup & Manage ML infrastructures.",
+          icon: "/assets/icons/unnamed-icon1.svg",
+        },
+        {
+          text: "Build scalable & reliable ingestion pipelines",
+          icon: "/assets/build ingestion.svg",
+        },
+        {
+          text: "Setup CI/CD pipelines",
+          icon: "/assets/icons/github.svg",
+        },
       ],
       row2: [
         {
-          text: "Build ingestion + processing pipelines",
+          text: "Develop and deploy Machine Learning (ML) models.",
+          icon: "/assets/tenorflow.svg",
+        },
+        {
+          text: "Establishing & Implement cost-effective cloud infrastructures.",
+          icon: "/assets/icons/unnamed-icon2.svg",
+        },
+        {
+          text: "Create internal Data observability systems.",
+          icon: "/assets/icons/grafana.svg",
+        },
+        {
+          text: "Setup & Manage ML infrastructures.",
+          icon: "/assets/icons/unnamed-icon1.svg",
+        },
+        {
+          text: "Build scalable & reliable ingestion pipelines",
           icon: "/assets/build ingestion.svg",
         },
-        { text: "Build & train ML models", icon: "/assets/tenorflow.svg" },
-        { text: "Deploy model services", icon: "/assets/deply.svg" },
+        {
+          text: "Setup CI/CD pipelines",
+          icon: "/assets/icons/github.svg",
+        },
       ],
     },
     2: {
       title: "Businesses hire from our pool",
       row1: [
         {
-          text: "Data Engineer",
+          text: "Data Platform Engineer",
           icon: "/assets/business-avatar1.svg",
-          name: "Jessica Bones",
+          name: "Sophia Müller",
         },
         {
           text: "Data Engineer",
           icon: "/assets/business-avatar1.svg",
-          name: "Jessica Bones",
+          name: "Daniel Novak",
         },
         {
           text: "Machine Learning Engineer",
           icon: "/assets/business-avatar2.svg",
-          name: "Alex John",
+          name: "Isabella Rossi",
         },
       ],
       row2: [
         {
           text: "Data Engineers",
           icon: "/assets/business-avatar2.svg",
-          name: "Jessica Bones",
+          name: "Camila Alvarez",
         },
         {
           text: "Machine Learning Engineer",
           icon: "/assets/business-avatar2.svg",
-          name: "Alex John",
+          name: "Oliver Fischer",
         },
         {
           text: "Data Engineer",
           icon: "/assets/business-avatar1.svg",
-          name: "Jessica Bones",
+          name: "Maya Tanaka",
         },
       ],
     },

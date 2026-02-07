@@ -40,9 +40,10 @@ const Hero = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="max-w-full lg:max-w-140.5 text-base lg:text-lg leading-relaxed text-[#E6E6E6]">
-                Join experienced <strong>Production Competent</strong> engineers
-                delivering Data and AI Platforms for businesses, or hire
-                engineers directly from this same pool.
+                Stuck in the 'experience required' loop? Our Engineering Pool
+                provides the hands-on, collaborative production work you need to
+                qualify for top-tier Data domain Engineering positions where you
+                build modern data platforms that unlock AI and Analytics.
               </p>
             </ScrollReveal>
 
@@ -53,15 +54,15 @@ const Hero = () => {
                   className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110"
                 >
                   Join The Pool
-                  <ArrowRight size={20} />
+                  {/* <ArrowRight size={20} /> */}
                 </button>
-                <button
+                {/* <button
                   onClick={() => dispatch(openModal("hire"))}
                   className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 border border-[#7632F9] bg-[#180A32] cursor-pointer px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-[#3E2D75]/30"
                 >
                   Hire From The Pool
                   <ArrowRight size={20} />
-                </button>
+                </button> */}
 
                 <FloatingCloud
                   src="/assets/cloud aesthetics 3.svg"
