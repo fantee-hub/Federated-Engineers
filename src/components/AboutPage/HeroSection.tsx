@@ -73,7 +73,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          <div className=" bg-white p-6 lg:px-16 relative">
+          <div className=" bg-white p-6 lg:px-16 lg:pb-20 pb-10 relative">
             <div className="max-w-260 space-y-6">
               <ScrollReveal delay={0.4}>
                 <p className="lg:text-[20px] text-lg leading-8 text-[#2E2E2E]">
