@@ -80,9 +80,9 @@ const MainSection = () => {
           <SectionTitle>Use of the Platform</SectionTitle>
           <div className="space-y-4">
             <TextContent>
-              Federated Engineers provides a platform for aspiring data
-              engineers to gain real world experience and for companies to
-              access vetted talent.
+              Federated Engineers provides a platform where engineers gain
+              practical, production-focused experience building data systems,
+              while organizations may access vetted engineering talent.
             </TextContent>
             <TextContent>
               You agree to use the platform responsibly and for lawful purposes
@@ -116,15 +116,12 @@ const MainSection = () => {
             <SectionTitle className="text-2xl lg:text-3xl font-semibold text-[#2F1464] mb-3">
               Contact Us
             </SectionTitle>
-            <TextContent>
-              If you have questions about this Privacy Policy, please contact us
-              at:
-            </TextContent>
+            <TextContent>For questions about these Terms, contact:</TextContent>
             <a
-              href="mailto:hello@federatedengineers.com"
+              href="mailto:Communications@federatedengineers.com"
               className="text-[#7632F9] font-semibold hover:underline"
             >
-              hello@federatedengineers.com
+              Communications@federatedengineers.com
             </a>
           </div>
         </div>
