@@ -18,37 +18,37 @@ const reasons = [
   {
     title: "Engineering Pool",
     description:
-      "Engineers work across teams to build full data platforms and gain production-ready, cross-functional experience.",
+      "Engineers collaborate across specialized teams to architect end-to-end data platforms, gaining the production-grade, cross-functional expertise required to lead modern engineering life cycles",
     icon: "/assets/icons/users-group.svg",
   },
   {
     title: "Foundational Infrastructure",
     description:
-      "We start by architecting the core scalable infrastructure—not local pipelines. Engineers build this collaboratively using GitOps.",
+      "We prioritize the architecture of scalable foundational infrastructure over the immediate development of local data workflows, ensuring all core systems are collaboratively deployed through a GitOps-driven framework.",
     icon: "/assets/icons/solar-documents.svg",
   },
   {
-    title: "Build Data Platforms that Power AI",
+    title: 'The "Production-First" Stack',
     description:
-      "Gain experience building scalable data platforms that power AI and other production workloads.",
+      "Our production stack uses Amazon EKS with ArgoCD and Terraform for infrastructure, Airbyte and Airflow for pipelines, DBT for transformations, and Prometheus/Grafana for observability and many more.",
     icon: "/assets/icons/bxs_data.svg",
   },
   {
     title: "Shift-Left Governance",
     description:
-      "We treat Data Quality, Security, and FinOps as first-class citizens from day one, not afterthoughts.",
+      "Data Quality, Security, and FinOps are established as first-class citizens and integral parts of the process from day one, rather than being treated as subsequent considerations.",
     icon: "/assets/icons/calendar.svg",
   },
   {
-    title: "Cost-Aware Cloud Engineering",
+    title: "Cloud FinOps",
     description:
-      "We focus on efficient architecture and cost awareness to help engineers build responsibly and reduce cloud spend.",
+      "Our focus is on enabling Engineers to build responsibly by emphasizing efficient architecture and cost awareness, thereby significantly reducing cloud expenditure.",
     icon: "/assets/icons/cloud-lock.svg",
   },
   {
     title: "Structured Workflow and Support",
     description:
-      "Shared tools and Project Standard Procedures (PSPs) give engineers clarity, while businesses get organized, predictable delivery.",
+      "Clarity for Engineers is achieved through shared tools and our Internal Project Standard Procedures (PSP), which in turn provides businesses with organized and predictable delivery.",
     icon: "/assets/icons/flow-tree.svg",
   },
 ];
