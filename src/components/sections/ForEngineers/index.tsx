@@ -31,11 +31,11 @@ const ForEngineers = () => {
       role: "Data Platform Engineers",
       icon: "/assets/business-avatar1.svg",
       tasks: [
-        "Design the storage and processing systems that power large-scale data workloads.",
-        "Setting up CI/CD workflows for data and AI components",
-        "Set up and maintain ETL/ELT pipelines and the orchestration systems that run them.",
-        "Tune compute, storage, and cloud resources for efficiency and reliability.",
-        "Supporting cross-functional teams across the pool",
+        "Develop and maintain an internal platform to enable Engineers to efficiently deploy their infrastructure needs.",
+        "Implement and manage the CI/CD pipeline, standardizing how Engineers reliably ship software within the environment.",
+        "Architect and secure the cloud networking infrastructure that supports all data tools.",
+        "Set up the Observability stack to monitor the performance and reliability of Data Tools and their underlying infrastructure.",
+        "Implement a FinOps pipeline for continuous tracking of cloud spend across all engineering teams.",
       ],
       initial: { y: -50 },
       position: "lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:z-20",
@@ -44,11 +44,12 @@ const ForEngineers = () => {
       role: "Data Engineers",
       icon: "/assets/business-avatar2.svg",
       tasks: [
-        "Designing and building data ingestion pipelines",
-        "Structuring datasets for analytics, ML, or operational use",
-        "Working with transformations, ETL/ELT flows, and storage layers",
-        "Ensuring data quality, reliability, and accessibility",
-        "Collaborating with ML engineers to provide training-ready data",
+        "Design, develop, and maintain robust data systems for processing and storage.",
+        "Engineer scalable, secure, and cost-effective ETL/ELT data pipelines.",
+        "Construct real-time data pipelines utilizing Kafka as the source.",
+        "Establish Data Quality Frameworks to ensure the accuracy and reliability of data.",
+        "Provide essential data support for ML Engineer teams to train machine learning models.",
+        "Implement pipeline observability stacks for comprehensive monitoring of ETL jobs.",
       ],
       initial: { x: -50 },
       position: "lg:bottom-0 lg:left-20 lg:z-20",
@@ -57,11 +58,11 @@ const ForEngineers = () => {
       role: "Machine Learning Engineers",
       icon: "/assets/business-avatar1.svg",
       tasks: [
-        "Building features, pipelines, and model training workflows",
-        "Preparing and validating datasets for model development",
-        "Supporting deployment of ML models into usable environments",
-        "Monitoring performance and refining workflows",
-        "Collaborating with platform engineers to ensure scalable systems",
+        "Build and maintain automated platforms to manage the end-to-end life cycle of model training, experimentation, and versioning.",
+        "Architect automated pipelines to transition models from research to production using containerization and orchestration.",
+        "Design and scale high-performance endpoints to deliver real-time predictions with minimal latency and resource consumption.",
+        "Implement tracking systems to detect model drift and performance degradation in live production environments.",
+        "Manage centralized feature stores to ensure consistent and high-quality data is available for both training and inference.",
       ],
       initial: { x: 50 },
       position: "lg:bottom-0 lg:right-20 lg:z-20",
@@ -77,17 +78,15 @@ const ForEngineers = () => {
               For Engineers
             </span>
             <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
-              What You’ll Work On as an Engineer in the Pool
+              Your Tasks in the Pool
             </h2>
             <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
-              Engineers gain experience building scalable data platforms that
-              support AI and analytics workloads, working across Data, Data
-              Platform, and Machine Learning engineering.
+              What is under the Your Task in the Pool
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="relative mx-auto max-w-300 lg:h-212.5">
+        <div className="relative mx-auto max-w-300 lg:h-282.5">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
