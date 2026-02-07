@@ -25,12 +25,12 @@ const Footer = () => {
               >
                 Join the Pool
               </button>
-              <button
+              {/* <button
                 onClick={() => dispatch(openModal("hire"))}
                 className="rounded-lg border-2 border-white lg:w-39.25 w-full h-15 font-semibold text-white text-lg cursor-pointer transition-all ease-in-out hover:scale-105 hover:bg-white/10"
               >
                 Hire Talent
-              </button>
+              </button> */}
             </div>
             <div className="flex justify-end mt-20 lg:mt-0">
               <img
@@ -47,8 +47,8 @@ const Footer = () => {
                 <h4 className="text-lg font-semibold text-white">Contact</h4>
                 <div className="space-y-4">
                   <a
-                    href="mailto:hello@federatedengineers.com"
-                    className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
+                    href="mailto:Communications@federatedengineers.com"
+                    className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60 underline"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
                       <img
@@ -57,7 +57,7 @@ const Footer = () => {
                         className="h-4 w-4"
                       />
                     </div>
-                    <span>hello@federatedengineers.com</span>
+                    <span>Communications@federatedengineers.com</span>
                   </a>
                   <div className="flex items-center gap-3 text-white transition-opacity hover:opacity-60">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
