@@ -36,9 +36,9 @@ const WhoWeServe = () => {
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => dispatch(openModal("join"))}
-                    className=" gap-2 rounded-lg bg-[#7632F9] lg:w-49.5 w-full h-14 flex items-center lg:justify-center justify-between px-4 lg:px-0 font-semibold text-white transition-all hover:brightness-110 cursor-pointer"
+                    className=" gap-2 rounded-lg bg-[#7632F9] lg:w-41.5 w-full h-14 flex items-center lg:justify-center justify-center px-4 lg:px-0 font-semibold text-white transition-all hover:brightness-110 cursor-pointer"
                   >
-                    Join Our Pool <ArrowRight size={20} />
+                    Join Our Pool
                   </motion.button>
                 </div>
               </div>
