@@ -5,6 +5,7 @@ import OurMission from "@/src/components/AboutPage/OurMission";
 import WhoWeServe from "@/src/components/AboutPage/WhoWeServe";
 import FAQSection from "@/src/components/sections/FaqSection";
 import WhyChoose from "@/src/components/sections/WhyChoose";
+import CorePillars from "@/src/components/AboutPage/CorePillars";
 
 export const metadata: Metadata = {
   title: "About Us | Federated Engineers",
@@ -51,6 +52,7 @@ const About = () => {
       <HeroSection />
       {/* <CoreValuesMarquee /> */}
       <OurMission />
+      <CorePillars />
       <WhyChoose />
       <WhoWeServe />
       <FAQSection className="border-b border-[#E6E6E6] lg:mb-20 mt-10 lg:mt-0 mb-10 lg:border-t-0 border-t" />
