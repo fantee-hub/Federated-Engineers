@@ -18,10 +18,11 @@ export default function Home() {
         <ForEngineers />
       </div>
       <WhyChoose />
-      <ReadyToBuild />
       <div id="how-it-works">
         <HowItWorks />
       </div>
+      <ReadyToBuild />
+
       <div id="businesses">
         <ForBusinesses />
       </div>

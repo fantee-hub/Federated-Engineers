@@ -44,7 +44,7 @@ const stepVariants: Variants = {
 
 const HowItWorks = () => {
   return (
-    <section className="w-full bg-white page border-b border-[#E6E6E6] px-4 lg:px-0 mt-10 lg:mt-0 border-t lg:border-t-0">
+    <section className="w-full bg-white page border-b border-[#E6E6E6] px-4 lg:px-0 mt-10 lg:my-20 border-t lg:border-t">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
         <ScrollReveal>
           <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
@@ -78,7 +78,7 @@ const HowItWorks = () => {
                  lg:nth-[2n]:border-r lg:nth-[3n]:border-r-0 g:nth-last-[-n+3]:border-b-0"
             >
               <div className="mb-8">
-                <span className="inline-block rounded-full px-4 py-3 text-sm font-semibold text-[#7632F9] bg-white border border-[#E6E6E6]">
+                <span className="inline-block rounded-full px-4 py-3 text-sm font-semibold text-white bg-[#7632F9] ">
                   {item.step}
                 </span>
               </div>
