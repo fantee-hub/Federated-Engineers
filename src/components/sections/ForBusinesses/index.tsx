@@ -8,7 +8,7 @@ import { openModal } from "@/src/lib/redux/slices/modalSlice";
 const ForBusinesses = () => {
   const dispatch = useDispatch();
   return (
-    <section className="w-full bg-white border-y border-[#E6E6E6]  page lg:mt-20 mt-10 px-4 lg:px-0">
+    <section className="w-full bg-white border-t-0 border-[#E6E6E6]  page lg:mt-0  px-4 lg:px-0">
       <div className="border-x border-[#E6E6E6] mx-auto max-w-300">
         <ScrollReveal>
           <div className="flex flex-col items-center px-6 lg:px-10 pt-10 lg:pt-20 pb-8 lg:pb-10 text-center">
@@ -30,9 +30,9 @@ const ForBusinesses = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => dispatch(openModal("hire"))}
-              className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-[#7632F9] lg:w-48.25 w-full h-15 font-semibold text-white text-lg transition-all hover:brightness-110 cursor-pointer shadow-purple-200"
+              className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-[#7632F9] lg:w-40.25 w-full h-15 font-semibold text-white text-lg transition-all hover:brightness-110 cursor-pointer shadow-purple-200"
             >
-              Contact Us <ArrowRight size={20} />
+              Contact Us
             </motion.button>
           </div>
         </ScrollReveal>
