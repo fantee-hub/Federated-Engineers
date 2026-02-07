@@ -161,10 +161,10 @@ const MainSection = () => {
               at:
             </TextContent>
             <a
-              href="mailto:hello@federatedengineers.com"
+              href="mailto:Communications@federatedengineers.com"
               className="text-[#7632F9] font-semibold hover:underline"
             >
-              hello@federatedengineers.com
+              Communications@federatedengineers.com
             </a>
           </div>
         </div>
