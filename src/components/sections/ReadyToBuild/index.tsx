@@ -24,7 +24,7 @@ const ReadyToBuild = () => {
 
   const dispatch = useDispatch();
   return (
-    <section className="w-full bg-white border-b border-t lg:border-t-0 border-[#E6E6E6] page px-4 lg:px-0">
+    <section className="w-full bg-white border-b border-t lg:border-t border-[#E6E6E6] page px-4 lg:px-0">
       <div className="w-full flex justify-center gap-px mx-auto max-w-300">
         <div>
           <img
