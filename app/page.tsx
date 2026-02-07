@@ -17,6 +17,7 @@ export default function Home() {
       <div id="engineers">
         <ForEngineers />
       </div>
+      <WhyChoose />
       <ReadyToBuild />
       <div id="how-it-works">
         <HowItWorks />
@@ -24,7 +25,7 @@ export default function Home() {
       <div id="businesses">
         <ForBusinesses />
       </div>
-      <WhyChoose />
+
       <FAQSection className="border-y border-[#E6E6E6] lg:my-20 my-10" />
     </div>
   );
