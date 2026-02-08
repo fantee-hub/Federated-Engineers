@@ -30,7 +30,7 @@ const Hero = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row lg:items-center pt-20 lg:pt-0">
-          <div className="flex-1 space-y-6 lg:space-y-4 max-w-full lg:max-w-155.75 z-10 px-4 lg:px-0">
+          <div className="flex-1 space-y-6 lg:space-y-4 max-w-full lg:max-w-155.75 z-10 px-4 lg:px-0 lg:pl-0  xl:pl-0 2xl:pl-40 2xl:max-w-200">
             <ScrollReveal>
               <h1 className="text-[26px] lg:text-[48px] font-semibold leading-tight lg:leading-16 tracking-tight">
                 A Collaborative Pool of <br className="hidden lg:block" />
