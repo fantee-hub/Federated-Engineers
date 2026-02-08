@@ -203,7 +203,7 @@ const Nav = () => {
             <div className="grow" />
 
             <div className="flex flex-col border-t border-[#E6E6E6] bg-white">
-              <button
+              {/* <button
                 onClick={() => {
                   dispatch(openModal("hire"));
                   setIsOpen(false);
@@ -212,16 +212,15 @@ const Nav = () => {
               >
                 Hire From The Pool
                 <ArrowRight size={20} />
-              </button>
+              </button> */}
               <button
                 onClick={() => {
                   dispatch(openModal("join"));
                   setIsOpen(false);
                 }}
-                className="flex items-center justify-between text-lg px-8 py-4 bg-[#7632F9] text-white font-semibold cursor-pointer"
+                className="flex items-center justify-center text-lg px-8 py-4 bg-[#7632F9] text-white font-semibold cursor-pointer"
               >
                 Join The Pool
-                <ArrowRight size={20} />
               </button>
             </div>
             <div className="grow" />
