@@ -78,8 +78,10 @@ const Footer = () => {
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white">Socials</h4>
                 <div className="space-y-4">
-                  <a
-                    href="#"
+                  <Link
+                    href="https://www.linkedin.com/company/federatedengineers"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
@@ -90,9 +92,11 @@ const Footer = () => {
                       />
                     </div>
                     <span>Linkedin</span>
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    href="https://x.com/Federated_Engrs"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
@@ -103,7 +107,7 @@ const Footer = () => {
                       />
                     </div>
                     <span>X (Former Twitter)</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
