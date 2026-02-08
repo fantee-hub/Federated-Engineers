@@ -1,6 +1,10 @@
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
 import { NextResponse } from "next/server";
+import { Client } from "@notionhq/client";
+
+// Initialize Notion client
+const notion = new Client({ auth: process.env.NOTION_SECRET });
 
 export async function POST(req: Request) {
   try {
@@ -64,6 +68,51 @@ export async function POST(req: Request) {
       [HEADERS.LINKEDIN]: body.linkedinProfile || "N/A",
       [HEADERS.GITHUB]: body.githubProfile || "N/A",
       [HEADERS.DESCRIPTION]: body.description,
+    });
+
+    const formatUrl = (url?: string) =>
+      url && url.startsWith("http") ? url : null;
+
+    await notion.pages.create({
+      parent: { database_id: process.env.NOTION_DATABASE_ID! },
+      properties: {
+        Timestamp: {
+          rich_text: [{ text: { content: new Date().toLocaleString() } }],
+        },
+        Type: {
+          rich_text: [{ text: { content: body.type || "N/A" } }],
+        },
+        "First Name": {
+          title: [{ text: { content: body.firstName } }],
+        },
+        "Last Name": {
+          rich_text: [{ text: { content: body.lastName } }],
+        },
+        "Email/Work Email": {
+          email: body.email || null,
+        },
+        "Company Name": {
+          rich_text: [{ text: { content: body.companyName || "N/A" } }],
+        },
+        "Engineering Role": {
+          rich_text: [{ text: { content: body.role } }],
+        },
+        "Years of Experience": {
+          rich_text: [{ text: { content: body.experience } }],
+        },
+        "Country of Residence": {
+          rich_text: [{ text: { content: body.country || "N/A" } }],
+        },
+        "LinkedIn Profile": {
+          url: formatUrl(body.linkedinProfile),
+        },
+        "GitHub Profile": {
+          url: formatUrl(body.githubProfile),
+        },
+        "Reason For Joining the Pool/Description of Need": {
+          rich_text: [{ text: { content: body.description || "N/A" } }],
+        },
+      },
     });
 
     return NextResponse.json({ message: "Success" }, { status: 200 });
