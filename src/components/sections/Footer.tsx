@@ -48,7 +48,7 @@ const Footer = () => {
                 <div className="space-y-4">
                   <a
                     href="mailto:Communications@federatedengineers.com"
-                    className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60 underline"
+                    className="group flex items-center gap-3 text-white transition-opacity hover:opacity-60 underline min-w-0"
                   >
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
                       <img
@@ -57,7 +57,9 @@ const Footer = () => {
                         className="h-4 w-4"
                       />
                     </div>
-                    <span>Communications@federatedengineers.com</span>
+                    <span className="break-all">
+                      Communications@federatedengineers.com
+                    </span>
                   </a>
                   <div className="flex items-center gap-3 text-white transition-opacity hover:opacity-60">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#471E95] transition-colors ">
