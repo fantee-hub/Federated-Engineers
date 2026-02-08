@@ -65,12 +65,11 @@ const services = [
     description:
       "We engineer end-to-end MLOps platforms that automate the training, evaluation, and deployment of models, equipping engineers with authentic machine learning workflow experience and businesses with robust, production-ready processes",
     icons: [
-      "/assets/insights.svg",
-      "/assets/icons/power-bi.svg",
-      "/assets/icons/looker.svg",
-      "/assets/icons/metabase.svg",
-      "/assets/icons/dbt-bit.svg",
-      "/assets/icons/apache-superset.svg",
+      "/assets/tenorflow.svg",
+      "/assets/icons/unnamed-icon1.svg",
+      "/assets/icons/mlflow.svg",
+      "/assets/icons/docker.svg",
+      "/assets/icons/kubeflow.svg",
     ],
   },
   {
