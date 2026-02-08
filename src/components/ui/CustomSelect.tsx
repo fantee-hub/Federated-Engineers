@@ -6,6 +6,7 @@ interface SelectProps {
   options: string[];
   value: string;
   onChange: (val: string) => void;
+  placeholder: string;
 }
 
 export const CustomSelect = ({
@@ -13,6 +14,7 @@ export const CustomSelect = ({
   options,
   value,
   onChange,
+  placeholder,
 }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +27,7 @@ export const CustomSelect = ({
         className="w-full flex items-center justify-between px-4 py-3 border border-[#E6E6E6] rounded-lg bg-white focus:ring-2 focus:ring-[#7632F9] outline-none cursor-pointer"
       >
         <span className={value ? "text-black font-semibold" : "text-[#5C5C5C]"}>
-          {value || "Select an option"}
+          {value || placeholder}
         </span>
         <ChevronDown
           size={20}

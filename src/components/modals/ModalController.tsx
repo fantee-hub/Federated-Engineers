@@ -14,9 +14,11 @@ export type FormData = {
   email: string;
   companyName: string;
   description: string;
-  profileLink: string;
+  linkedinProfile: string;
+  githubProfile: string;
   role: string;
   experience: string;
+  country: string;
 };
 
 const Input = ({
@@ -47,9 +49,11 @@ export const ModalController = () => {
     email: "",
     companyName: "",
     description: "",
-    profileLink: "",
+    linkedinProfile: "",
+    githubProfile: "",
     role: "",
     experience: "",
+    country: "",
   });
 
   const handleChange = (field: string, value: string) => {
@@ -85,16 +89,24 @@ export const ModalController = () => {
       newErrors.companyName = "Company name is required";
     }
 
-    if (!formData.description.trim()) {
-      newErrors.description = "Description is required";
-    }
-
     if (!formData.role.trim()) {
       newErrors.role = "Role is required";
     }
 
     if (!formData.experience.trim()) {
       newErrors.experience = "Experience is required";
+    }
+
+    if (view === "join" && !formData.githubProfile.trim()) {
+      newErrors.githubProfile = "GitHub profile is required";
+    }
+
+    if (view === "join" && !formData.linkedinProfile.trim()) {
+      newErrors.linkedinProfile = "LinkedIn profile is required";
+    }
+
+    if (view === "join" && !formData.country.trim()) {
+      newErrors.country = "Country is required";
     }
 
     setErrors(newErrors);
@@ -125,9 +137,11 @@ export const ModalController = () => {
           email: "",
           companyName: "",
           description: "",
-          profileLink: "",
+          linkedinProfile: "",
+          githubProfile: "",
           role: "",
           experience: "",
+          country: "",
         });
       } else {
         const errorData = await response.json();
@@ -214,10 +228,11 @@ export const ModalController = () => {
             <div className="md:col-span-2">
               <CustomSelect
                 label="Primary Engineering Role"
+                placeholder="Select a role"
                 options={[
                   "Data Platform Engineer",
                   "Data Engineer",
-                  "Machine Leanring Engineer",
+                  "Machine Learning Engineer",
                 ]}
                 value={formData.role}
                 onChange={(val) => setFormData({ ...formData, role: val })}
@@ -228,7 +243,8 @@ export const ModalController = () => {
             </div>
             <div className="md:col-span-2">
               <CustomSelect
-                label="Years of Experience"
+                label="Data Domain Years of Experience"
+                placeholder="Select years of experience"
                 options={["1-2 years", "3-5 years", "6-8 years", "8+ years"]}
                 value={formData.experience}
                 onChange={(val) =>
@@ -241,20 +257,53 @@ export const ModalController = () => {
             </div>
             <div className="md:col-span-2">
               <Input
-                label={
-                  <span>
-                    LinkedIn or GitHub Profile{" "}
-                    <span className="text-[#8A8A8A]">(optional)</span>
-                  </span>
+                label="Country of Residence"
+                placeholder="Enter country of residence"
+                onChange={(e) =>
+                  setFormData({ ...formData, country: e.target.value })
                 }
-                onChange={(e) => handleChange("profileLink", e.target.value)}
-                value={formData.profileLink}
-                placeholder="Paste in Linkedin or Github link"
+                value={formData.country}
               />
+              {errors.country && (
+                <p className="mt-1 text-sm text-red-500">{errors.country}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <Input
-                label="Why are you interested in joining the pool?"
+                label="LinkedIn Profile"
+                onChange={(e) =>
+                  setFormData({ ...formData, linkedinProfile: e.target.value })
+                }
+                value={formData.linkedinProfile}
+                placeholder="Paste in Linkedin link"
+              />
+              {errors.linkedinProfile && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.linkedinProfile}
+                </p>
+              )}
+            </div>
+            <div className="md:col-span-2">
+              <Input
+                label="GitHub Profile"
+                onChange={(e) => handleChange("githubProfile", e.target.value)}
+                value={formData.githubProfile}
+                placeholder="Paste in Github link"
+              />
+              {errors.githubProfile && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.githubProfile}
+                </p>
+              )}
+            </div>
+            <div className="md:col-span-2">
+              <Input
+                label={
+                  <span>
+                    Why are you interested in joining the pool?{" "}
+                    <span className="text-[#8A8A8A]">(optional)</span>
+                  </span>
+                }
                 value={formData.description}
                 placeholder="Enter your reason"
                 onChange={(e) =>
@@ -335,10 +384,11 @@ export const ModalController = () => {
             <div className="md:col-span-2">
               <CustomSelect
                 label="Engineering Role Needed"
+                placeholder="Select a role"
                 options={[
                   "Data Platform Engineer",
                   "Data Engineer",
-                  "Machine Leanring Engineer",
+                  "Machine Learning Engineer",
                 ]}
                 value={formData.role}
                 onChange={(val) => setFormData({ ...formData, role: val })}
@@ -350,6 +400,7 @@ export const ModalController = () => {
             <div className="md:col-span-2">
               <CustomSelect
                 label="Years of Experience"
+                placeholder="Select years of experience"
                 options={["1-2 years", "3-5 years", "6-8 years", "8+ years"]}
                 value={formData.experience}
                 onChange={(val) =>

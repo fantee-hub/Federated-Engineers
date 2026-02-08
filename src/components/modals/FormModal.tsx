@@ -58,9 +58,11 @@ export const FormModal = ({
         email: "",
         companyName: "",
         description: "",
-        profileLink: "",
+        githubProfile: "",
+        linkedinProfile: "",
         role: "",
         experience: "",
+        country: "",
       });
   };
 
