@@ -119,7 +119,7 @@ const MainSection = () => {
             <TextContent>For questions about these Terms, contact:</TextContent>
             <a
               href="mailto:Communications@federatedengineers.com"
-              className="text-[#7632F9] font-semibold hover:underline"
+              className="text-[#7632F9] font-semibold hover:underline break-all"
             >
               Communications@federatedengineers.com
             </a>
