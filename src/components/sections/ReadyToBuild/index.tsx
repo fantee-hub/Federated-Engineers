@@ -107,7 +107,6 @@ const ReadyToBuild = () => {
              cursor-pointer hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Join The Pool
-                <ArrowRight className="lg:hidden block" />
               </motion.button>
             </ScrollReveal>
           </div>
