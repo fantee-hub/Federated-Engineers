@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Who is Federated Engineers for?",
     answer:
-      "Federated Engineers is for engineers who want to move beyond tutorials and local projects — whether you’ve just finished school, completed a bootcamp, or want to level up your skills by working on real production systems.",
+      "Federated Engineers is for engineers who want to move beyond tutorials and local projects — whether you’ve just finished school, self learning, completed a bootcamp, or want to level up your skills by working on real production systems.",
   },
   {
     question: "What kind of experience will I gain in the pool?",
