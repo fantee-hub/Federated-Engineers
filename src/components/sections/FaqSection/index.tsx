@@ -21,6 +21,11 @@ const faqs = [
       "You’ll work on scalable, production-aligned systems alongside other engineers, learning how real platform dependencies, reliability, and cross-team collaboration work in production.",
   },
   {
+    question: "What is the minimum requirement to join the pool?",
+    answer:
+      "You should have completed a few local projects and understand the fundamentals of Data Engineering and Infrastructure or ML Engineering. We’ll help you build production-level experience from that base.",
+  },
+  {
     question: "Do I need my own cloud account or tools to join?",
     answer:
       "No. Federated Engineers provides the infrastructure, tooling, and environment you need. You focus on building and learning without worrying about setup or cloud costs.",
