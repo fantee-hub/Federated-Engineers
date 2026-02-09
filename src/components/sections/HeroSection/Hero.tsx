@@ -40,10 +40,13 @@ const Hero = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="max-w-full lg:max-w-140.5 text-base lg:text-lg leading-relaxed text-[#E6E6E6]">
-                Stuck in the 'experience required' loop? Our Engineering Pool
-                provides the hands-on, collaborative production work you need to
-                qualify for top-tier Data domain Engineering positions where you
-                build modern data platforms that unlock AI and Analytics.
+                <span className="font-semibold text-white">
+                  Stuck in the 'experience required' loop?
+                </span>
+                <br /> Our Engineering Pool provides the hands-on, collaborative
+                production work you need to qualify for top-tier Data domain
+                Engineering positions where you build modern data platforms that
+                unlock AI and Analytics.
               </p>
             </ScrollReveal>
 
