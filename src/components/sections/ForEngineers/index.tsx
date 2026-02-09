@@ -80,9 +80,9 @@ const ForEngineers = () => {
             <h2 className="max-w-4xl lg:text-[48px] text-[28px] font-semibold lg:leading-14 leading-8 text-[#2F1464]">
               Your Tasks in the Pool
             </h2>
-            <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
+            {/* <p className="max-w-174.5 pt-2 text-[#5C5C5C]">
               What is under the Your Task in the Pool
-            </p>
+            </p> */}
           </div>
         </ScrollReveal>
 
