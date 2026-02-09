@@ -96,8 +96,8 @@ const ProductionGap = () => {
           </motion.p>
         </div>
 
-        <div className="hidden lg:block overflow-hidden border-t  border-[#E6E6E6]">
-          <div className="grid grid-cols-3 bg-white border-b border-[#E6E6E6]">
+        <div className="hidden lg:block border-t  border-[#E6E6E6]">
+          <div className="sticky top-18 z-30 grid grid-cols-3 bg-white border-b border-[#E6E6E6]">
             <div className="p-6 font-semibold text-black text-xl bg-[#FAFAFA]">
               Feature
             </div>
