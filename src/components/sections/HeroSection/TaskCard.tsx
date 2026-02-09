@@ -78,7 +78,7 @@ export const TaskCard = () => {
       title: "Engineers do tasks like",
       row1: [
         {
-          text: "Establishing & Implement cost-effective cloud infrastructures.",
+          text: "Implement cost-effective cloud infrastructures.",
           icon: "/assets/icons/unnamed-icon2.svg",
         },
         {
@@ -108,7 +108,7 @@ export const TaskCard = () => {
           icon: "/assets/tenorflow.svg",
         },
         {
-          text: "Establishing & Implement cost-effective cloud infrastructures.",
+          text: "Implement cost-effective cloud infrastructures.",
           icon: "/assets/icons/unnamed-icon2.svg",
         },
         {
