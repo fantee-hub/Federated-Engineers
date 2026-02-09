@@ -51,7 +51,7 @@ const Hero = () => {
               <div className="flex flex-col lg:flex-row gap-4 relative mt-8 ">
                 <button
                   onClick={() => dispatch(openModal("join"))}
-                  className="w-full lg:w-auto rounded-lg flex items-center justify-between lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110"
+                  className="w-full lg:w-auto rounded-lg flex items-center justify-center lg:justify-start gap-2 bg-[#7632F9] px-6 py-4 font-semibold cursor-pointer text-lg text-white transition-all hover:brightness-110"
                 >
                   Join The Pool
                   {/* <ArrowRight size={20} /> */}
